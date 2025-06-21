@@ -26,7 +26,6 @@ function loadScript(src) {
 }
 
  loadScript('/js/jquery.js')
-    .then(() => loadScript('/js/vendors/jquery.appear.js'))
-    .then(() => loadScript('/js/vendors/imagesloaded.pkgd.js'))
+    .then(() => loadScript('/js/vendors.js'))
     .then(() => loadScript('/js/main.js'))
     .catch(err => console.error('Script load failed:', err));
