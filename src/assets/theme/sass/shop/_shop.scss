@@ -1,3 +1,5 @@
+@use "../mixins/mixins";
+
 /* ===================================
    16. Shop
 ====================================== */
@@ -20,7 +22,7 @@
         text-align: center;
         position: relative;
         z-index: 1;
-        @include prefix(transition, all 400ms cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
+        @include mixins.prefix(transition, all 400ms cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
     }
@@ -35,7 +37,7 @@
                 left: 0;
                 bottom: 0;
                 width: 0%;
-                @include prefix(transition, all 400ms cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
+                @include mixins.prefix(transition, all 400ms cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
             }
         }
     }
@@ -44,12 +46,12 @@
         top: -15px;
         right: -10px;
         opacity: 0;
-        @include prefix(transition, all 400ms cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
-        @include prefix(transform, scale(.8), webkit); 
+        @include mixins.prefix(transition, all 400ms cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
+        @include mixins.prefix(transform, scale(.8), webkit); 
     }
     &:hover {
         .categories-box {
-            @include prefix(transform, translate3d(0, -7px, 0), webkit);
+            @include mixins.prefix(transform, translate3d(0, -7px, 0), webkit);
         }
         a {
             &:last-child {
@@ -62,7 +64,7 @@
         }
         .count-circle {
             opacity: 1;
-            @include prefix(transform, scale(1.1), webkit); 
+            @include mixins.prefix(transform, scale(1.1), webkit); 
         }
         img {
             opacity: .6;
@@ -72,7 +74,7 @@
 
 /* Categories style 02 */
 .categories-style-02 {
-    @include prefix(transition, all 400ms cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
+    @include mixins.prefix(transition, all 400ms cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
     .categories-box {
         position: relative;
     }
@@ -85,7 +87,7 @@
 .categories-style-03 {
     .categories-box {
         position: relative;
-        @include prefix(transition, all 400ms cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
+        @include mixins.prefix(transition, all 400ms cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
         .category-title {
             position: absolute;
             left: 0;
@@ -94,13 +96,13 @@
             width: 100%;
         }
         .category-image {
-            @include prefix(transform, scale(1.0), webkit);
-            @include prefix(transition, all 400ms cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
+            @include mixins.prefix(transform, scale(1.0), webkit);
+            @include mixins.prefix(transition, all 400ms cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
         }
         &:hover {
-            @include prefix(transform, scale(1.05), webkit); 
+            @include mixins.prefix(transform, scale(1.05), webkit); 
             .category-image {
-                @include prefix(transform, scale(1.1), webkit);
+                @include mixins.prefix(transform, scale(1.1), webkit);
             }
         }
     }
@@ -112,7 +114,7 @@
     margin-right: -10px;
     .shop-box {
         border:6px solid #fff;
-        @include prefix(transition-duration, 0.4s, webkit);
+        @include mixins.prefix(transition-duration, 0.4s, webkit);
         .shop-image {
             overflow: hidden;
             a {
@@ -126,15 +128,15 @@
                 width: 100%;
                 height: 100%;
                 opacity: 0;
-                @include prefix(transition, all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
+                @include mixins.prefix(transition, all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
             }
             .shop-hover {
                 position: absolute;
                 bottom: 0px;
                 width: 100%; 
-                @include prefix(transition-duration, 0.3s, webkit);
+                @include mixins.prefix(transition-duration, 0.3s, webkit);
                 a {
-                    @include prefix(transform, translateY(15px), webkit);
+                    @include mixins.prefix(transform, translateY(15px), webkit);
                     opacity: 0;
                 }
             }
@@ -145,7 +147,7 @@
             }
         } 
         &:hover {
-            @include box-shadow(0 0 50px rgba(0,0,0,.08));
+            @include mixins.box-shadow(0 0 50px rgba(0,0,0,.08));
             border:6px solid #fff;
             .shop-image {
                 .product-overlay {
@@ -154,17 +156,17 @@
                 .shop-hover { 
                     bottom: 25px;
                     a {
-                        @include prefix(transform, translateY(0px), webkit);
-                        @include prefix(transition-delay, 0.1s, webkit);
+                        @include mixins.prefix(transform, translateY(0px), webkit);
+                        @include mixins.prefix(transition-delay, 0.1s, webkit);
                         opacity: 1;
                         &:nth-child(2) {
-                            @include prefix(transition-delay, 0.2s, webkit);
+                            @include mixins.prefix(transition-delay, 0.2s, webkit);
                         }
                         &:nth-child(3) {
-                            @include prefix(transition-delay, 0.3s, webkit);
+                            @include mixins.prefix(transition-delay, 0.3s, webkit);
                         }
                         &:nth-child(4) {
-                            @include prefix(transition-delay, 0.4s, webkit);
+                            @include mixins.prefix(transition-delay, 0.4s, webkit);
                         }
                     }
                 } 
@@ -182,7 +184,7 @@
             .shop-image {
                 overflow: hidden;
                 img{
-                    @include prefix(transition, all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
+                    @include mixins.prefix(transition, all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
                 }
                 .shop-overlay {
                     position: absolute;
@@ -191,7 +193,7 @@
                     width: 100%;
                     height: 100%;
                     opacity: 0;
-                    @include prefix(transition, all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
+                    @include mixins.prefix(transition, all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
                 } 
                 .shop-hover {
                     position: absolute;
@@ -199,7 +201,7 @@
                     width:auto;
                     right: 12px;
                     opacity: 0;
-                    @include prefix(transition-duration, 0.3s, webkit);
+                    @include mixins.prefix(transition-duration, 0.3s, webkit);
                     ul {
                         padding:0;
                         li {
@@ -207,19 +209,19 @@
                             width: auto;
                             margin: 0 0 8px;
                             padding: 0;
-                            @include prefix(transform, translateY(20px), webkit);
-                            @include prefix(transition-duration, 0.3s, webkit);
+                            @include mixins.prefix(transform, translateY(20px), webkit);
+                            @include mixins.prefix(transition-duration, 0.3s, webkit);
                             &:nth-child(1) {
-                                @include prefix(transition-delay, 25ms, webkit);
+                                @include mixins.prefix(transition-delay, 25ms, webkit);
                             }
                             &:nth-child(2) {
-                                @include prefix(transition-delay, 50ms, webkit);
+                                @include mixins.prefix(transition-delay, 50ms, webkit);
                             }
                             &:nth-child(3) {
-                                @include prefix(transition-delay, 75ms, webkit);
+                                @include mixins.prefix(transition-delay, 75ms, webkit);
                             }
                             :nth-child(4) {
-                                @include prefix(transition-delay, 1ms, webkit);
+                                @include mixins.prefix(transition-delay, 1ms, webkit);
                             } 
                             a { 
                                 &:hover {
@@ -239,8 +241,8 @@
                         opacity: 0;
                         visibility: hidden;
                         width: 100%;
-                        @include prefix(transform, translateY(10px), webkit);
-                        @include prefix(transition, all 0.3s ease-in-out, webkit);
+                        @include mixins.prefix(transform, translateY(10px), webkit);
+                        @include mixins.prefix(transition, all 0.3s ease-in-out, webkit);
                         &.btn-large {
                             padding: 8px 20px;
                         }
@@ -255,11 +257,11 @@
             &:hover {
                 .shop-image {
                     img{
-                        @include prefix(transform, scale(1.05), webkit);
+                        @include mixins.prefix(transform, scale(1.05), webkit);
                     }
                     .shop-buttons-wrap {
                         .btn {
-                            @include prefix(transform, translateY(0px), webkit);
+                            @include mixins.prefix(transform, translateY(0px), webkit);
                             opacity: 1;
                             visibility: visible;
                         } 
@@ -272,7 +274,7 @@
                         top: 20px; 
                         ul {
                             li { 
-                                @include prefix(transform, translateY(0px), webkit);  
+                                @include mixins.prefix(transform, translateY(0px), webkit);  
                             }
                         }
                     }
@@ -322,8 +324,8 @@
                     left: 50%;
                     top: 50%;
                     opacity: 0;
-                    @include prefix(transition, 0.4s, webkit);
-                    @include prefix(transform, translate(-50%, -50%), webkit);
+                    @include mixins.prefix(transition, 0.4s, webkit);
+                    @include mixins.prefix(transform, translate(-50%, -50%), webkit);
                 }
             }
             .item-qty {
@@ -383,7 +385,7 @@
 .toolbar-wrapper {
     a {
         img {
-            @include prefix(transition, 0.3s, webkit);
+            @include mixins.prefix(transition, 0.3s, webkit);
         }
         &:hover {
             img {
@@ -559,7 +561,7 @@
         left: 15px;
         top: 50%;
         color: var(--dark-gray);
-        @include prefix(transform, translateY(-3px), webkit);
+        @include mixins.prefix(transform, translateY(-3px), webkit);
         &.qty-plus {
             right: 15px;
             left: auto; 
@@ -712,7 +714,7 @@
                     right: 0;
                     top: 50%;
                     font-size: 20px;
-                    @include prefix(transform, translateY(-50%), webkit);
+                    @include mixins.prefix(transform, translateY(-50%), webkit);
                 }
                 .product-detail {
                     a {
@@ -754,7 +756,7 @@
             width: 100%;
         }
         img{
-            @include prefix(transition, all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
+            @include mixins.prefix(transition, all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
         }
         .category-hover-content {
             position: absolute;
@@ -764,39 +766,39 @@
             width: calc(100% - 40px);
             opacity: 0;
             visibility: hidden;
-            @include prefix(transform, scale(0.9), webkit);
+            @include mixins.prefix(transform, scale(0.9), webkit);
             a {
                 opacity: 0;
-                @include prefix(transition, 0.2s, webkit);
-                @include prefix(transform, translateY(30px), webkit);
+                @include mixins.prefix(transition, 0.2s, webkit);
+                @include mixins.prefix(transform, translateY(30px), webkit);
                 &:hover {
                     color: var(--dark-gray);
                 }
             }
             .title {
                 opacity: 0;
-                @include prefix(transition, 0.3s, webkit);
-                @include prefix(transform, scale(0.8), webkit);
+                @include mixins.prefix(transition, 0.3s, webkit);
+                @include mixins.prefix(transform, scale(0.8), webkit);
             }
         }
         &:hover {
             img{
-                @include prefix(transform, scale(1.1), webkit); 
+                @include mixins.prefix(transform, scale(1.1), webkit); 
                 opacity: .6;
             }
             .category-hover-content {
                 opacity: 1;
                 visibility: visible; 
-                @include prefix(transform, scale(1.0), webkit);
+                @include mixins.prefix(transform, scale(1.0), webkit);
                 .title {
                     opacity: 1; 
-                    @include prefix(transform, scale(1.0), webkit);
-                    @include prefix(transition-delay, 0.1s, webkit);
+                    @include mixins.prefix(transform, scale(1.0), webkit);
+                    @include mixins.prefix(transition-delay, 0.1s, webkit);
                 }
                 a {
                     opacity: 1; 
-                    @include prefix(transform, translateY(0px), webkit);
-                    @include prefix(transition-delay, 0.2s, webkit);
+                    @include mixins.prefix(transform, translateY(0px), webkit);
+                    @include mixins.prefix(transition-delay, 0.2s, webkit);
                 }
             }
         }

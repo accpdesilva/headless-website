@@ -1,3 +1,5 @@
+@use "../mixins/mixins";
+
 /* Modal popup */ 
 #popup-form { cursor:default; }
 .mfp-image-holder, .mfp-iframe-holder {
@@ -154,24 +156,24 @@
 .my-mfp-zoom-in {
     .zoom-anim-dialog {
         opacity: 0;
-        @include prefix(transform, scale3d(0.9, 0.9, 1), webkit o);
-        @include prefix(transition, all 0.5s cubic-bezier(0.2, 0, 0.3, 1), webkit);
+        @include mixins.prefix(transform, scale3d(0.9, 0.9, 1), webkit o);
+        @include mixins.prefix(transition, all 0.5s cubic-bezier(0.2, 0, 0.3, 1), webkit);
     }
     &.mfp-ready {
         .zoom-anim-dialog {
             opacity: 1;
-            @include prefix(transform, translate3d(0, 0, 0) scale3d(1, 1, 1), webkit o);
+            @include mixins.prefix(transform, translate3d(0, 0, 0) scale3d(1, 1, 1), webkit o);
         }
     }
     &.mfp-removing {
         .zoom-anim-dialog {
-            @include prefix(transform, scale(0.8), webkit);
+            @include mixins.prefix(transform, scale(0.8), webkit);
             opacity: 0;
         }
     }
     &.mfp-bg {
         opacity: 0;
-        @include prefix(transition, opacity 0.3s ease-out, webkit);
+        @include mixins.prefix(transition, opacity 0.3s ease-out, webkit);
     }
     &.mfp-ready.mfp-bg {
         opacity: 0.8;
@@ -187,24 +189,24 @@
 .my-mfp-slide-bottom {
     .zoom-anim-dialog {
         opacity: 0;
-        @include prefix(transition, all 0.3s ease-out, webkit);
-        @include prefix(transform, translateY(-20px) perspective(600px) rotateX(10deg), webkit o);
+        @include mixins.prefix(transition, all 0.3s ease-out, webkit);
+        @include mixins.prefix(transform, translateY(-20px) perspective(600px) rotateX(10deg), webkit o);
     }
     &.mfp-ready {
         .zoom-anim-dialog {
             opacity: 1;
-            @include prefix(transform, translateY(0) perspective(600px) rotateX(0), webkit o);
+            @include mixins.prefix(transform, translateY(0) perspective(600px) rotateX(0), webkit o);
         }
     }
     &.mfp-removing {
         .zoom-anim-dialog {
             opacity: 0;
-            @include prefix(transform, translateY(-10px) perspective(600px) rotateX(10deg), webkit o);
+            @include mixins.prefix(transform, translateY(-10px) perspective(600px) rotateX(10deg), webkit o);
         }
     }
     &.mfp-bg {
         opacity: 0;
-        @include prefix(transition, opacity 0.3s ease-out, webkit);
+        @include mixins.prefix(transition, opacity 0.3s ease-out, webkit);
     }
     &.mfp-ready {
         &.mfp-bg {
@@ -221,23 +223,23 @@
 /* Slide up animation */
 .my-mfp-slide-up {
     .slide-up-popup {
-        @include prefix(transition, all 0.5s cubic-bezier(0.2, 0, 0.3, 1), webkit);
-        @include prefix(transform, translate3d(0, 30px, 0), webkit);
+        @include mixins.prefix(transition, all 0.5s cubic-bezier(0.2, 0, 0.3, 1), webkit);
+        @include mixins.prefix(transform, translate3d(0, 30px, 0), webkit);
     }
     &.mfp-ready {
         .slide-up-popup {    
-            @include prefix(transform, translate3d(0, 0, 0) scale3d(1, 1, 1), webkit o);
+            @include mixins.prefix(transform, translate3d(0, 0, 0) scale3d(1, 1, 1), webkit o);
         }
     }
     &.mfp-removing {
         .slide-up-popup {
             opacity: 0;
-            @include prefix(transform, translate3d(0, 30px, 0), webkit);
+            @include mixins.prefix(transform, translate3d(0, 30px, 0), webkit);
         }
     }
     &.mfp-bg {
         opacity: 0;
-        @include prefix(transition, opacity 0.3s ease-out, webkit);
+        @include mixins.prefix(transition, opacity 0.3s ease-out, webkit);
     }
     &.mfp-ready {
         &.mfp-bg {
@@ -260,7 +262,7 @@
 }
 .mfp-fade.mfp-bg { 
     opacity: 0;
-    @include prefix(transition, all 0.3s ease-out, webkit o);
+    @include mixins.prefix(transition, all 0.3s ease-out, webkit o);
 }
 .mfp-fade.mfp-bg.mfp-ready {
     opacity: 0.93;
@@ -270,7 +272,7 @@
 }
 .mfp-fade.mfp-wrap .mfp-content {
     opacity: 0;
-    @include prefix(transition, all 0.3s ease-out, webkit o);
+    @include mixins.prefix(transition, all 0.3s ease-out, webkit o);
 }
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content { 
     opacity: 1; 
@@ -284,7 +286,7 @@
     margin: 0 auto;
     position: relative;
     top: 50%;
-    @include prefix(transform, translateY(-50%), webkit);
+    @include mixins.prefix(transform, translateY(-50%), webkit);
 }
 button.mfp-close,
 button.mfp-close:active {

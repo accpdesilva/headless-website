@@ -1,30 +1,34 @@
+@use "../../mixins/mixins";
+
+@use "sass:map";
+@use "sass:string";
 /* Padding and margin */
 $sides: (t: top, e: right, b: bottom, s: left);
 $properties: (p: padding, m: margin);
 
-@each $key, $value in $breakpoints {
-    @include respond-to($key) {         
-        $devicemode: map-get($prefix, $key);               
+@each $key, $value in mixins.$breakpoints {
+    @include mixins.respond-to($key) {         
+        $devicemode: map.get(mixins.$prefix, $key);               
         @each $index, $property in $properties {
             $spacing: 5;
             @while $spacing <= 70 {
-                .#{$devicemode}-#{$index}-#{$spacing+'px'} {#{$property}: unquote(#{$spacing})+'px !important';}
+                .#{$devicemode}-#{$index}-#{$spacing+'px'} {#{$property}: string.unquote(#{$spacing})+'px !important';}
                 $spacing: $spacing + 5;
             }
             $spacing: 1;
             @while $spacing <= 30 {
-                .#{$devicemode}-#{$index}-#{$spacing} {#{$property}: unquote(#{$spacing})+'% !important';} 
+                .#{$devicemode}-#{$index}-#{$spacing} {#{$property}: string.unquote(#{$spacing})+'% !important';} 
                 $spacing: $spacing + 1;
             }
             @each $side-index, $side in $sides {
                 $spacing: 5;
                 @while $spacing <= 70 {
-                    .#{$devicemode}-#{$index}#{$side-index}-#{$spacing+'px'} {#{$property}-#{$side}: unquote(#{$spacing})+'px !important';}
+                    .#{$devicemode}-#{$index}#{$side-index}-#{$spacing+'px'} {#{$property}-#{$side}: string.unquote(#{$spacing})+'px !important';}
                     $spacing: $spacing + 5;
                 }
                 $spacing: 1;
                 @while $spacing <= 30 {
-                    .#{$devicemode}-#{$index}#{$side-index}-#{$spacing} {#{$property}-#{$side}: unquote(#{$spacing})+'% !important';}
+                    .#{$devicemode}-#{$index}#{$side-index}-#{$spacing} {#{$property}-#{$side}: string.unquote(#{$spacing})+'% !important';}
                     $spacing: $spacing + 1;
                 }
             }
@@ -34,7 +38,7 @@ $properties: (p: padding, m: margin);
         @each $side in $sides {
             $spacing: 0;
             @while $spacing <= 150 {
-                .#{$devicemode}-#{$side}-#{$spacing+'px'} {#{$side}: unquote(#{$spacing})+'px !important';}
+                .#{$devicemode}-#{$side}-#{$spacing+'px'} {#{$side}: string.unquote(#{$spacing})+'px !important';}
                 @if $spacing < 30 {
                     $spacing: $spacing + 1;
                 } @else {
@@ -46,7 +50,7 @@ $properties: (p: padding, m: margin);
         @each $side in $sides {
             $spacing: 0;
             @while $spacing <= 150 {
-                .#{$devicemode}-#{$side}-#{'minus-'+$spacing+'px'} {#{$side}: unquote(#{'-'+$spacing})+'px !important';}
+                .#{$devicemode}-#{$side}-#{'minus-'+$spacing+'px'} {#{$side}: string.unquote(#{'-'+$spacing})+'px !important';}
                 @if $spacing < 30 {
                     $spacing: $spacing + 1;
                 } @else {
@@ -58,14 +62,14 @@ $properties: (p: padding, m: margin);
         $spacing: 0;
         @while $spacing <= 10 {
             .#{$devicemode}-border-width-#{$spacing+'px'} {
-                border-width: unquote(#{$spacing})+'px' !important;
+                border-width: string.unquote(#{$spacing})+'px' !important;
             }
             $spacing: $spacing + 1; 
         } 
 
     }
 }
-@include respond-to('desktop') {
+@include mixins.respond-to('desktop') {
     /* No margin */
     .xxl-ms-0 {
         margin-left: 0 !important;
@@ -132,7 +136,7 @@ $properties: (p: padding, m: margin);
         border-left: 0 !important;
     }
 }
-@include respond-to('mini-desktop') { 
+@include mixins.respond-to('mini-desktop') { 
     /* No margin */
     .xl-ms-0 {
         margin-left: 0 !important;
@@ -186,7 +190,7 @@ $properties: (p: padding, m: margin);
         padding: 0 !important;
     } 
 }
-@include respond-to('laptop') { 
+@include mixins.respond-to('laptop') { 
     /* No margin */ 
     .lg-ms-0 {
         margin-left: 0 !important;
@@ -247,7 +251,7 @@ $properties: (p: padding, m: margin);
         left: auto !important;
     }
 }
-@include respond-to('tablet') { 
+@include mixins.respond-to('tablet') { 
     /* No margin */
     .md-ms-0 {
         margin-left: 0 !important;
@@ -314,7 +318,7 @@ $properties: (p: padding, m: margin);
         left: auto !important;
     }
 }
-@include respond-to('phone-landscape') {
+@include mixins.respond-to('phone-landscape') {
     /* No margin */
     .sm-ms-0 {
         margin-left: 0 !important;
@@ -385,7 +389,7 @@ $properties: (p: padding, m: margin);
         min-height:100px !important;
     }
 }
-@include respond-to('phone-portrait') {
+@include mixins.respond-to('phone-portrait') {
     /* No margin */
     .xs-ms-0 {
         margin-left: 0 !important;

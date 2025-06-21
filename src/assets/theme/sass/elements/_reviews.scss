@@ -1,3 +1,6 @@
+@use "../mixins/mixins";
+@use "../variables";
+
 .review-star-icon {
     i {
         color: #fd961e;
@@ -17,18 +20,18 @@
         height: auto; 
         .swiper-slide:not(.swiper-slide-thumb-active) {
             img { 
-                @include prefix(transform, scale(0.8), webkit); 
+                @include mixins.prefix(transform, scale(0.8), webkit); 
             }
         }
         img { 
             border: 6px solid transparent; 
             margin: 0 auto; 
-            @include prefix(transition, all 0.3s ease-in-out, webkit); 
+            @include mixins.prefix(transition, all 0.3s ease-in-out, webkit); 
         }
         .swiper-slide-thumb-active {
             img { 
                 box-shadow: 0 0 30px rgba(0,0,0,.05); 
-                border: 6px solid $white; 
+                border: 6px solid variables.$white; 
             }
         }
         .swiper-slide { 

@@ -1,4 +1,6 @@
-@include respond-to('phone-landscape') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('phone-landscape') {
     .swiper-horizontal-3d {
         .swiper-slide {
             &.swiper-slide-active {
@@ -23,7 +25,7 @@
         .swiper-button-prev.slider-custom-text-prev,
         .swiper-button-next.slider-custom-text-next {
             min-height: 1px;
-            @include prefix(transform, translateY(0), webkit);
+            @include mixins.prefix(transform, translateY(0), webkit);
             top: initial;
             right: auto;
             left: auto;
@@ -35,7 +37,7 @@
         }
     }
 }
-@include respond-to('phone-portrait') {
+@include mixins.respond-to('phone-portrait') {
     .testimonials-style-12 {
         .swiper-button-previous-nav {
             left: 25px;

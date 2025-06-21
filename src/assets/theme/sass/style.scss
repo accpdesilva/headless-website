@@ -35,76 +35,76 @@ Table of contents
 */
 
 // Initialize
-@import "variables"; // For SCSS variables
-@import "theme-vars"; // For CSS variables
-@import "mixins/mixins";
+@use "variables"; // For SCSS variables
+@use "theme-vars"; // For CSS variables
+@use "mixins/mixins";
 
 // Core CSS
-@import "core/reset";
-@import "core/typography";
-@import "core/classes";
-@import "core/loop";
+@use "core/reset";
+@use "core/typography";
+@use "core/classes";
+@use "core/loop";
 
 // Header
-@import "header/header";
+@use "header/header";
 
 // Page title
-@import "titlebar/page-titles";
+@use "titlebar/page-titles";
 
 // Layouts
-@import "layouts/sidebar";
-@import "layouts/grid";
+@use "layouts/sidebar";
+@use "layouts/grid";
 
 // Elements
-@import "elements/accordions-and-toggles";
-@import "elements/alert-box";
-@import "elements/blockquote";
-@import "elements/buttons";
-@import "elements/clients";
-@import "elements/columns";
-@import "elements/contact-form";
-@import "elements/content-carousel";
-@import "elements/countdown";
-@import "elements/counters";
-@import "elements/divider";
-@import "elements/drop-caps";
-@import "elements/event";
-@import "elements/fancy-heading";
-@import "elements/fancy-text-box";
-@import "elements/google-map";
-@import "elements/heading"; 
-@import "elements/highlights";
-@import "elements/icon-with-text";
-@import "elements/image-gallery";
-@import "elements/instagram";
-@import "elements/interactive-banners";
-@import "elements/lists";
-@import "elements/media";
-@import "elements/modal-popup";
-@import "elements/parallax-scrolling";
-@import "elements/particles";
-@import "elements/pie-chart";
-@import "elements/pricing-table";
-@import "elements/process-step";
-@import "elements/progress-bar";
-@import "elements/reviews";
-@import "elements/rotate-box";
-@import "elements/services";
-@import "elements/sliding-box";
-@import "elements/social-icons";
-@import "elements/subscribe";
-@import "elements/tab";
-@import "elements/team";
-@import "elements/testimonials";
+@use "elements/accordions-and-toggles";
+@use "elements/alert-box";
+@use "elements/blockquote";
+@use "elements/buttons";
+@use "elements/clients";
+@use "elements/columns";
+@use "elements/contact-form";
+@use "elements/content-carousel";
+@use "elements/countdown";
+@use "elements/counters";
+@use "elements/divider";
+@use "elements/drop-caps";
+@use "elements/event";
+@use "elements/fancy-heading";
+@use "elements/fancy-text-box";
+@use "elements/google-map";
+@use "elements/heading"; 
+@use "elements/highlights";
+@use "elements/icon-with-text";
+@use "elements/image-gallery";
+@use "elements/instagram";
+@use "elements/interactive-banners";
+@use "elements/lists";
+@use "elements/media";
+@use "elements/modal-popup";
+@use "elements/parallax-scrolling";
+@use "elements/particles";
+@use "elements/pie-chart";
+@use "elements/pricing-table";
+@use "elements/process-step";
+@use "elements/progress-bar";
+@use "elements/reviews";
+@use "elements/rotate-box";
+@use "elements/services";
+@use "elements/sliding-box";
+@use "elements/social-icons";
+@use "elements/subscribe";
+@use "elements/tab";
+@use "elements/team";
+@use "elements/testimonials";
 
 // Blog
-@import "blog/blog";
+@use "blog/blog";
 
 // Portfolio
-@import "portfolio/portfolio";
+@use "portfolio/portfolio";
 
 // Shop
-@import "shop/shop";
+@use "shop/shop";
 
 // Footer
-@import "footer/footer";
+@use "footer/footer";

@@ -1,4 +1,6 @@
-@include respond-to('tablet') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('tablet') {
     .process-step-style-02, .process-step-style-03, .process-step-style-04 {
         &:nth-child(2) {
             .progress-step-separator {
@@ -7,7 +9,7 @@
         }
     }
 }
-@include respond-to('phone-landscape') {
+@include mixins.respond-to('phone-landscape') {
     .process-step-style-02, .process-step-style-03, .process-step-style-04 { 
         .progress-step-separator {
             display: none;

@@ -1,9 +1,11 @@
-@include respond-to('tablet') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('tablet') {
     .down-section {
         bottom: 35px;
     }
 }
-@include respond-to('phone-landscape') {
+@include mixins.respond-to('phone-landscape') {
     .page-title-extra-large {
         h1 {
             font-size: 36px;
@@ -23,7 +25,7 @@
         }
     }
 }
-@include respond-to('phone-portrait') {
+@include mixins.respond-to('phone-portrait') {
     .breadcrumb {
         ul {
             li {

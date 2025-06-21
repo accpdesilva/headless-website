@@ -1,4 +1,6 @@
-@include respond-to('laptop') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('laptop') {
     button.mfp-close,
     .mfp-image-holder button.mfp-close,
     .mfp-iframe-holder button.mfp-close,
@@ -11,13 +13,13 @@
         top: 10px;
     }
 }
-@include respond-to('tablet') {
+@include mixins.respond-to('tablet') {
     .mfp-container {
         padding-left: 25px;
         padding-right: 25px;
     }
 }
-@include respond-to('phone-landscape') {
+@include mixins.respond-to('phone-landscape') {
     .mfp-container {
         padding-left: 15px;
         padding-right: 15px;

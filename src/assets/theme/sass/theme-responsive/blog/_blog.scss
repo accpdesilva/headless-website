@@ -1,4 +1,6 @@
-@include respond-to('desktop') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('desktop') {
     .blog-simple {
         figure {
             figcaption {
@@ -6,7 +8,7 @@
                     display: block !important;
                     height: auto !important;
                     margin-bottom: -50px !important;
-                    @include prefix(transition, 0.3s, webkit);
+                    @include mixins.prefix(transition, 0.3s, webkit);
                 }
             }
             &:hover {
@@ -30,7 +32,7 @@
         }
     }
 }
-@include respond-to('tablet') {
+@include mixins.respond-to('tablet') {
     .blog-date {
         .feature-box {
             .feature-box-icon {
@@ -39,7 +41,7 @@
         }
     }
 }
-@include respond-to('phone-landscape') {
+@include mixins.respond-to('phone-landscape') {
     .blog-standard {
         .entry-meta {
             span {
@@ -60,7 +62,7 @@
         }
     }
 }
-@include respond-to('phone-portrait') {
+@include mixins.respond-to('phone-portrait') {
     .blog-date {
         .feature-box {
             .feature-box-icon {

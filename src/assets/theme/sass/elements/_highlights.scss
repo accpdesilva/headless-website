@@ -1,3 +1,5 @@
+@use "../mixins/mixins";
+
 /* Text highlight */ 
 .text-highlight {
     position: relative;
@@ -14,7 +16,7 @@
 /* Separator animation */ 
 .separator-animation {
     width: 0 !important;
-    @include prefix(transition, all 1s cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
+    @include mixins.prefix(transition, all 1s cubic-bezier(0.165, 0.84, 0.44, 1), webkit);
 }
 .shadow-in {
     .separator-animation {

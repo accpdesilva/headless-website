@@ -1,3 +1,5 @@
+@use "../mixins/mixins";
+
 /* Tab */
 .nav-tabs {
     > li {            
@@ -18,7 +20,7 @@
             color: var(--medium-gray);
             border: 1px solid var(--light-medium-gray);
             border-bottom: none;
-            @include prefix(border-radius, 6px 6px 0 0, webkit);
+            @include mixins.prefix(border-radius, 6px 6px 0 0, webkit);
             &.active, &.show, &:hover {
                 color: var(--dark-gray);
                 background-color: var(--white);
@@ -45,10 +47,10 @@
                         padding: 0;
                         color: var(--medium-gray);
                         border-bottom: 2px solid transparent;
-                        @include prefix(transition, all 0.3s linear, webkit);
+                        @include mixins.prefix(transition, all 0.3s linear, webkit);
                         i {
-                            @include prefix(transition, all 0.3s linear, webkit);
-                            @include prefix(transform, translateY(0), webkit);
+                            @include mixins.prefix(transition, all 0.3s linear, webkit);
+                            @include mixins.prefix(transform, translateY(0), webkit);
                             will-change: transform;
                         }
                         &:hover {
@@ -56,8 +58,8 @@
                             border-bottom: 2px solid;
                             i {
                                 color: var(--base-color);
-                                @include prefix(transform, translateY(-5px), webkit);
-                                @include prefix(transform, scale(1.1), webkit);
+                                @include mixins.prefix(transform, translateY(-5px), webkit);
+                                @include mixins.prefix(transform, scale(1.1), webkit);
                             }
                         }
                         &.active {
@@ -80,15 +82,15 @@
     .nav-tabs {
         .nav-link {
             border: none;
-            @include prefix(border-radius, 50px, webkit);
+            @include mixins.prefix(border-radius, 50px, webkit);
             padding: 10px 40px;
             color: var(--medium-gray);
-            @include prefix(transition, all 0.3s linear, webkit);
+            @include mixins.prefix(transition, all 0.3s linear, webkit);
             &.show, &.active, &:hover {
                 color: var(--dark-gray);
                 background-color: var(--white);
-                @include box-shadow(0 0 10px rgba(0,0,0,.08));
-                @include prefix(transform, translate3d(0, -3px, 0), webkit);
+                @include mixins.box-shadow(0 0 10px rgba(0,0,0,.08));
+                @include mixins.prefix(transform, translate3d(0, -3px, 0), webkit);
             }
         }
         > li {
@@ -114,13 +116,13 @@
                     width: 100%;
                     height: 2px;
                     display: block;
-                    @include prefix(transform, scaleX(0), wekit moz ms);
-                    @include prefix(transition, transform .5s ease, webkit);
+                    @include mixins.prefix(transform, scaleX(0), wekit moz ms);
+                    @include mixins.prefix(transition, transform .5s ease, webkit);
                 }
                 &.active, &.show, &:hover {
                     color: var(--dark-gray);
                     .tab-border {
-                        @include prefix(transform, scaleX(1), webkit);
+                        @include mixins.prefix(transform, scaleX(1), webkit);
                     }
                 }
             }
@@ -143,8 +145,8 @@
                 padding: 20px 28px 22px;
                 margin-bottom: 15px;
                 background: transparent;
-                @include prefix(border-radius, 4px, webkit);
-                @include prefix(transition, all 0.3s cubic-bezier(0.12, 0, 0.39, 0), webkit);
+                @include mixins.prefix(border-radius, 4px, webkit);
+                @include mixins.prefix(transition, all 0.3s cubic-bezier(0.12, 0, 0.39, 0), webkit);
                 display: flex;
                 align-items: center;
                 i {
@@ -156,12 +158,12 @@
                     position: relative;
                     top: 1px;
                     color: var(--dark-gray);
-                    @include prefix(transition, all 0.3s cubic-bezier(0.12, 0, 0.39, 0), webkit);
+                    @include mixins.prefix(transition, all 0.3s cubic-bezier(0.12, 0, 0.39, 0), webkit);
                 }
                 &:hover, &.show, &.active {     
                     background: var(--white);
                     color: var(--base-color);
-                    @include box-shadow(0 0 20px rgba(0,0,0,.08));
+                    @include mixins.box-shadow(0 0 20px rgba(0,0,0,.08));
                     i {
                         color: var(--base-color);
                     }
@@ -243,30 +245,30 @@
                 border-color:var(--extra-medium-gray);
                 padding: 38px 60px 38px; 
                 background: transparent; 
-                @include prefix(border-radius, 0, webkit);
-                @include prefix(transition, 0.4s, webkit);
+                @include mixins.prefix(border-radius, 0, webkit);
+                @include mixins.prefix(transition, 0.4s, webkit);
                 position:relative;
                 span{ 
                     color: var(--dark-gray);
                     z-index: 9;
                     position: relative;
-                    @include prefix(transition, 0.3s cubic-bezier(0.12, 0, 0.39, 0), webkit);
+                    @include mixins.prefix(transition, 0.3s cubic-bezier(0.12, 0, 0.39, 0), webkit);
                 }
                 &:hover, &.show, &.active {  
                     color: var(--white);  
                     isolation: inherit;
                     span{
                         color: var(--white); 
-                        @include prefix(transition, 0.5s, webkit);
+                        @include mixins.prefix(transition, 0.5s, webkit);
                     }
                     .number-box {
                         opacity:1; 
-                        @include prefix(transform, translate(50%, -50%), webkit); 
+                        @include mixins.prefix(transform, translate(50%, -50%), webkit); 
                         transition: opacity 0.4s,transform 0.4s;
-                        @include prefix(transition-delay, 0.35s, webkit);
+                        @include mixins.prefix(transition-delay, 0.35s, webkit);
                     }
                     .bg-hover {
-                        @include prefix(transform, scaleX(1), webkit);
+                        @include mixins.prefix(transform, scaleX(1), webkit);
                     }
                 }
                 .number-box {
@@ -275,9 +277,9 @@
                     z-index:9;
                     right:0;
                     opacity:0;
-                    @include prefix(transform, translate(25%, -50%), webkit);
+                    @include mixins.prefix(transform, translate(25%, -50%), webkit);
                     transition: opacity 0s,transform 0s;
-                    @include prefix(transition-delay, 0s, webkit);
+                    @include mixins.prefix(transition-delay, 0s, webkit);
                 }
                 .bg-hover {
                     position:absolute;
@@ -286,9 +288,9 @@
                     left:0;
                     top:0;
                     content: "";
-                    @include prefix(transform, scaleX(0), webkit);
+                    @include mixins.prefix(transform, scaleX(0), webkit);
                     transform-origin: left;
-                    @include prefix(transition, 0.3s cubic-bezier(0.12, 0, 0.39, 0), webkit);
+                    @include mixins.prefix(transition, 0.3s cubic-bezier(0.12, 0, 0.39, 0), webkit);
                     z-index: 1;
                 }
             }
@@ -321,7 +323,7 @@
                     border:0;
                     color:var(--base-color);
                     .tab-border {
-                        @include prefix(transform, scaleX(1), wekit moz ms);
+                        @include mixins.prefix(transform, scaleX(1), wekit moz ms);
                     }
                 }
             }
@@ -329,8 +331,8 @@
                 width: calc(100% + 2px);
                 height: 3px;
                 display: block;
-                @include prefix(transform, scaleX(0), wekit moz ms);
-                @include prefix(transition, transform .5s ease, webkit);
+                @include mixins.prefix(transform, scaleX(0), wekit moz ms);
+                @include mixins.prefix(transition, transform .5s ease, webkit);
                 position: absolute;
                 left: -1px;
                 top: 0;

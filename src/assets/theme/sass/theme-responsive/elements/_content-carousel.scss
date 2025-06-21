@@ -1,4 +1,6 @@
-@include respond-to('phone-landscape') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('phone-landscape') {
     .text-slider-style-05 {
         .swiper-slide {
             -webkit-filter: grayscale(0);

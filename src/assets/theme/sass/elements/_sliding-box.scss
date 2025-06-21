@@ -1,18 +1,20 @@
+@use "../mixins/mixins";
+
 /* Sliding box zoom effect */ 
 @keyframes scale-effect {
     0% {
-        @include prefix(transform, scale(0.9), webkit);
+        @include mixins.prefix(transform, scale(0.9), webkit);
     }
     to {
-        @include prefix(transform, scale(1), webkit);
+        @include mixins.prefix(transform, scale(1), webkit);
     }
 }
 @-webkit-keyframes scale-effect {
     0% {
-        @include prefix(transform, scale(0.9), webkit);
+        @include mixins.prefix(transform, scale(0.9), webkit);
     }
     to {
-        @include prefix(transform, scale(1), webkit);
+        @include mixins.prefix(transform, scale(1), webkit);
     }
 }
 
@@ -37,18 +39,18 @@
 /* Sliding box right effect */ 
 @keyframes slide-right {
     0% {
-        @include prefix(transform, translateX(-25px), webkit);
+        @include mixins.prefix(transform, translateX(-25px), webkit);
     }
     to {
-        @include prefix(transform, translateX(0), webkit);
+        @include mixins.prefix(transform, translateX(0), webkit);
     }
 }
 @-webkit-keyframes slide-right {
     0% {
-        @include prefix(transform, translateX(-25px), webkit);
+        @include mixins.prefix(transform, translateX(-25px), webkit);
     }
     to {
-        @include prefix(transform, translateX(0), webkit);
+        @include mixins.prefix(transform, translateX(0), webkit);
     }
 }
 
@@ -63,7 +65,7 @@
         float: left;
         overflow: hidden;
         position: relative;        
-        @include prefix(transition, width 0.7s, webkit);   
+        @include mixins.prefix(transition, width 0.7s, webkit);   
         .sliding-box-content {
             top: 0;
             height: 100%;
@@ -90,7 +92,7 @@
                 border-right-color: var(--white);
                 border-width: 12px;
                 pointer-events: none;
-                @include prefix(transition, all 0.2s linear, webkit);
+                @include mixins.prefix(transition, all 0.2s linear, webkit);
             }
         }
         &.active, &:hover {
@@ -108,7 +110,7 @@
     .sliding-box-item {
         .sliding-box-img {
             border-radius: 4px;
-            @include prefix(transition, all 0.2s linear, webkit);
+            @include mixins.prefix(transition, all 0.2s linear, webkit);
         }
         &.active {
             .sliding-box-img {
@@ -134,7 +136,7 @@
         height: 100%;
         opacity: 0.5;
         z-index: 1;
-        @include prefix(transition, all 0.3s linear, webkit);
+        @include mixins.prefix(transition, all 0.3s linear, webkit);
     }
     .overlay-contnet {
         position: absolute;
@@ -142,7 +144,7 @@
         top: 0;
         opacity: 1;
         visibility: visible;
-        @include prefix(transition, all 0.4s linear, webkit);
+        @include mixins.prefix(transition, all 0.4s linear, webkit);
     }
     .number {
         position: absolute;

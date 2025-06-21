@@ -1,3 +1,5 @@
+@use "../mixins/mixins";
+
 /* First letter */ 
 .first-letter {
     float: left;
@@ -20,7 +22,7 @@
 
 /* First letter round */ 
 .first-letter-round {
-    @include prefix(border-radius, 50%, webkit);
+    @include mixins.prefix(border-radius, 50%, webkit);
     font-size: 3.5rem;
 }
 

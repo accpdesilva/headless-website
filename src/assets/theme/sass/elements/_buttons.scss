@@ -1,10 +1,12 @@
+@use "../mixins/mixins";
+
 /* Button */ 
 .btn-box-shadow {
-    @include box-shadow(0 5px 20px rgba(0,0,0,.1));
-    @include prefix(transition, all 0.3s cubic-bezier(0.2, 0, 0.3, 1), webkit);
+    @include mixins.box-shadow(0 5px 20px rgba(0,0,0,.1));
+    @include mixins.prefix(transition, all 0.3s cubic-bezier(0.2, 0, 0.3, 1), webkit);
     &:hover {
-        @include box-shadow(0 8px 30px 0 rgba(0,0,0,.15));
-        @include prefix(transform, translate3d(0, -2px, 0), webkit);
+        @include mixins.box-shadow(0 8px 30px 0 rgba(0,0,0,.15));
+        @include mixins.prefix(transform, translate3d(0, -2px, 0), webkit);
     }
 }
 .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
@@ -20,9 +22,9 @@
     width: auto;
     font-family: var(--alt-font);
     font-weight: 500;
-    @include prefix(transition, all 300ms ease-in-out, webkit);
+    @include mixins.prefix(transition, all 300ms ease-in-out, webkit);
     &:focus {
-        @include box-shadow(none);
+        @include mixins.box-shadow(none);
     }
     &:hover {
         background-color: inherit;
@@ -72,14 +74,14 @@
             padding: 8px 20px;
         }
         &.btn-rounded {
-            @include prefix(border-radius, 50px, webkit);
+            @include mixins.prefix(border-radius, 50px, webkit);
         }        
     }
     &.btn-round-edge {
-        @include prefix(border-radius, 4px, webkit);
+        @include mixins.prefix(border-radius, 4px, webkit);
     }
     &.btn-round-edge-small {
-        @include prefix(border-radius, 2px, webkit);
+        @include mixins.prefix(border-radius, 2px, webkit);
     } 
     
     // Link button 
@@ -121,7 +123,7 @@
         &.expand{
             span{
                 width: 50%;
-                @include prefix(transition, all 0.3s ease, webkit);
+                @include mixins.prefix(transition, all 0.3s ease, webkit);
             }
         }
         &:hover {
@@ -148,7 +150,7 @@
             width: 50%;
             height: 100%;
             z-index: -1;
-            @include prefix(transition, 0.3s, webkit);
+            @include mixins.prefix(transition, 0.3s, webkit);
         }
         &:hover, &:active {
             border-color: transparent;
@@ -174,8 +176,8 @@
             top: 50%;
             left: 0; 
             z-index: -1;
-            @include prefix(transition, 0.3s, webkit);
-            @include prefix(transform, translateY(-50%), webkit);
+            @include mixins.prefix(transition, 0.3s, webkit);
+            @include mixins.prefix(transform, translateY(-50%), webkit);
         }
         &:hover {
             span {
@@ -254,7 +256,7 @@
                 opacity: 0;
                 transition-delay: 0s;
                 margin-left:0;
-                @include prefix(transform, translateX(-10px), webkit);
+                @include mixins.prefix(transform, translateX(-10px), webkit);
             } 
         }
         &:hover {
@@ -284,14 +286,14 @@
                 opacity: 0; 
                 margin-left: 0;
                 transition-delay: 0s;
-                @include prefix(transform, translateX(10px), webkit);
+                @include mixins.prefix(transform, translateX(10px), webkit);
                 +.btn-icon {  
                     opacity: 1; 
                     margin-left:0;
                     margin-right:6px;
                     transition: opacity .4s .25s,transform .6s .25s;
                     transition-timing-function: cubic-bezier(.1,.75,.25,1);
-                    @include prefix(transform, translateX(0px), webkit);
+                    @include mixins.prefix(transform, translateX(0px), webkit);
                 } 
             }
             &:hover {
@@ -344,11 +346,11 @@
         }
         &:hover {
             .btn-text { 
-                @include prefix(transform, translateX(-12px), webkit);
+                @include mixins.prefix(transform, translateX(-12px), webkit);
             }
             .btn-icon i {
                 opacity: 1; 
-                @include prefix(transform, translateX(12px), webkit);
+                @include mixins.prefix(transform, translateX(12px), webkit);
             }
         }
         &:active {
@@ -368,11 +370,11 @@
             }
             &:hover {
                 .btn-text { 
-                    @include prefix(transform, translateX(15px), webkit);
+                    @include mixins.prefix(transform, translateX(15px), webkit);
                 }
                 .btn-icon i {
                     opacity: 1; 
-                    @include prefix(transform, translateX(-20px), webkit);
+                    @include mixins.prefix(transform, translateX(-20px), webkit);
                 }
             }
         }
@@ -381,22 +383,22 @@
     // Slide button
     &.btn-slide-up {
         span {
-            @include prefix(transform, translateY(100%), webkit);
+            @include mixins.prefix(transform, translateY(100%), webkit);
         }
     }
     &.btn-slide-down {
         span {
-            @include prefix(transform, translateY(-100%), webkit);
+            @include mixins.prefix(transform, translateY(-100%), webkit);
         }
     }
     &.btn-slide-left {
         span {
-            @include prefix(transform, translateX(100%), webkit);
+            @include mixins.prefix(transform, translateX(100%), webkit);
         }
     }
     &.btn-slide-right {
         span {
-            @include prefix(transform, translateX(-100%), webkit);
+            @include mixins.prefix(transform, translateX(-100%), webkit);
         }
     }
     &.btn-slide-up, &.btn-slide-down, &.btn-slide-left, &.btn-slide-right {
@@ -410,18 +412,18 @@
             z-index: -1;
             left: -2px;
             top: 0;
-            @include prefix(transition, 0.3s, webkit);
+            @include mixins.prefix(transition, 0.3s, webkit);
         }
         &:hover {
             span {
-                @include prefix(transform, translateY(0), webkit);
+                @include mixins.prefix(transform, translateY(0), webkit);
             }
         }
     }
     &.btn-radius {
-        @include prefix(transition, all 0.5s, webkit);
+        @include mixins.prefix(transition, all 0.5s, webkit);
         &:hover {
-            @include prefix(border-radius, 10px, webkit);
+            @include mixins.prefix(border-radius, 10px, webkit);
         }
     }
     &.arrow-bounce-right {
@@ -459,12 +461,12 @@
             opacity: 0;
             -webkit-transition: opacity 0.3s, -webkit-transform 0.3s; 
             transition: opacity 0.3s, transform 0.3s;
-            @include prefix(transform, translateY(7px), webkit);
+            @include mixins.prefix(transform, translateY(7px), webkit);
         }
         &:hover {
             &:after {
                 opacity: 1;
-                @include prefix(transform, translateY(0), webkit);
+                @include mixins.prefix(transform, translateY(0), webkit);
             }
         }
         &.btn-medium, &.btn-small, &.btn-very-small {
@@ -472,7 +474,7 @@
         }
     }
     &.hover-text-dark {
-        @include prefix(transition, all 0.3s linear, webkit);
+        @include mixins.prefix(transition, all 0.3s linear, webkit);
         margin: 0;
         padding: 0;
         position: relative;
@@ -488,7 +490,7 @@
             content: attr(data-hover);
             max-height: 0;
             overflow: hidden;
-            @include prefix(transition, max-height 0.5s, webkit);
+            @include mixins.prefix(transition, max-height 0.5s, webkit);
         }
         &:hover {
             opacity: 1;
@@ -498,7 +500,7 @@
         }
     }
     &.hover-text-light {
-        @include prefix(transition, all 0.3s linear, webkit);
+        @include mixins.prefix(transition, all 0.3s linear, webkit);
         margin: 0;
         padding: 0;
         position: relative;
@@ -514,7 +516,7 @@
             content: attr(data-hover);
             max-height: 0;
             overflow: hidden;
-            @include prefix(transition, max-height 0.5s, webkit);
+            @include mixins.prefix(transition, max-height 0.5s, webkit);
         }
         &:hover {
             opacity: .6;
@@ -724,7 +726,7 @@
                 color: var(--dark-gray);
                 &:after {
                     border-color: var(--dark-gray);
-                    @include prefix(transition, all 0.3s ease, webkit);
+                    @include mixins.prefix(transition, all 0.3s ease, webkit);
                 }
             }
             &.hover-border-color-white {
@@ -733,7 +735,7 @@
                     color: var(--white);
                     &:after {
                         border-color: var(--white);
-                        @include prefix(transition, all 0.3s ease, webkit);
+                        @include mixins.prefix(transition, all 0.3s ease, webkit);
                     }
                 }
             }
@@ -747,7 +749,7 @@
                 color: var(--base-color);
                 &:after {
                     border-color: var(--base-color);
-                    @include prefix(transition, all 0.3s ease, webkit);
+                    @include mixins.prefix(transition, all 0.3s ease, webkit);
                 }
             }
         }
@@ -760,7 +762,7 @@
                 color: var(--base-color);
                 &:after {
                     border-color: var(--base-color);
-                    @include prefix(transition, all 0.3s ease, webkit);
+                    @include mixins.prefix(transition, all 0.3s ease, webkit);
                 }
             }
         }
@@ -776,7 +778,7 @@
                 color: var(--white);
                 &:after {
                     border-color: rgba(255,255,255,1);
-                    @include prefix(transition, all 0.3s ease, webkit);
+                    @include mixins.prefix(transition, all 0.3s ease, webkit);
                 }
             }  
         }
@@ -792,7 +794,7 @@
                 color: var(--dark-gray);
                 &:after {
                     border-color: rgba(35,35,35,1);
-                    @include prefix(transition, all 0.3s ease, webkit); 
+                    @include mixins.prefix(transition, all 0.3s ease, webkit); 
                 }
             }  
         }
@@ -941,8 +943,8 @@
             border-radius: 100%;
             right: 8px;
             top: 50%;
-            @include prefix(transform, translateY(-50%), webkit);
-            @include box-shadow(0 5px 10px 0 rgba(0,0,0,.35));
+            @include mixins.prefix(transform, translateY(-50%), webkit);
+            @include mixins.box-shadow(0 5px 10px 0 rgba(0,0,0,.35));
             i {
                 margin: 0;
             }
@@ -1055,8 +1057,8 @@
 /* Blog button */  
 .categories-btn {
     padding: 4px 12px;
-    @include prefix(border-radius, 2px, webkit);
-    @include prefix(transition, 0.3s, webkit);
+    @include mixins.prefix(border-radius, 2px, webkit);
+    @include mixins.prefix(transition, 0.3s, webkit);
     margin-left: 5px;
     display: inline-block;
     font-size: 12px;

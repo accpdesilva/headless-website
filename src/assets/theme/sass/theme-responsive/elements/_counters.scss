@@ -1,4 +1,6 @@
-@include respond-to('tablet') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('tablet') {
     .counter-style-06 {
         .feature-box {
             &:nth-last-child(2n+1) {
@@ -11,7 +13,7 @@
         } 
     }
 }
-@include respond-to('phone-portrait') {
+@include mixins.respond-to('phone-portrait') {
     .counter-style-06 {
         .feature-box {
             .feature-box-content { 

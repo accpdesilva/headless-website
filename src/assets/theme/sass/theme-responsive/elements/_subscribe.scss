@@ -1,4 +1,6 @@
-@include respond-to('phone-landscape') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('phone-landscape') {
     .newsletter-style-01 {
         &.box-shadow {
             box-shadow: none;

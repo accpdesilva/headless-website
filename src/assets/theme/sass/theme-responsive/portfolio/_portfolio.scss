@@ -1,4 +1,6 @@
-@include respond-to('desktop') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('desktop') {
     .sticky-image-distortion-wrapper {
         .menu {
             padding-left: 30px;
@@ -37,7 +39,7 @@
         }
     }
 }
-@include respond-to('mini-desktop') {
+@include mixins.respond-to('mini-desktop') {
     .threeD-letter-menu {
         .menu-item {
             .hover-reveal {
@@ -92,7 +94,7 @@
         }
     }
 }
-@include respond-to('laptop') {
+@include mixins.respond-to('laptop') {
     .portfolio-creative {
         .portfolio-box {
             .portfolio-title {
@@ -121,7 +123,7 @@
         }
     }
 }
-@include respond-to('tablet') {
+@include mixins.respond-to('tablet') {
     .portfolio-filter {
         &.filter-btn {
             li {
@@ -158,7 +160,7 @@
         }
     }
 }
-@include respond-to('phone-landscape') {
+@include mixins.respond-to('phone-landscape') {
     .portfolio-filter {
         &.filter-btn {
             li {
@@ -207,7 +209,7 @@
         }
     }
 }
-@include respond-to('phone-portrait') {
+@include mixins.respond-to('phone-portrait') {
     .portfolio-attractive {
         .portfolio-box:hover {
             .portfolio-hover {

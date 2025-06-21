@@ -1,3 +1,5 @@
+@use "../mixins/mixins";
+
 /* Countdown style 01 */ 
 .countdown-style-01 { 
     .counter-container {
@@ -13,8 +15,8 @@
             padding: 25px 20px 20px;
             margin: 0 15px;
             text-align: center;
-            @include prefix(border-radius, 6px, webkit);
-            @include box-shadow(0 0 25px rgba(0, 0, 0, 0.05));
+            @include mixins.prefix(border-radius, 6px, webkit);
+            @include mixins.box-shadow(0 0 25px rgba(0, 0, 0, 0.05));
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -60,7 +62,7 @@
             position: absolute;
             top: 50%;
             right: -5px;
-            @include prefix(transform, translateY(-50%), webkit);
+            @include mixins.prefix(transform, translateY(-50%), webkit);
             color: var(--white);
             text-align: center;
             font-size: 3rem;

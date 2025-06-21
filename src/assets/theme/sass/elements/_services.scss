@@ -1,3 +1,5 @@
+@use "../mixins/mixins";
+
 /* Services box style 01 */ 
 .services-box-style-01 {  
     .icon-box {
@@ -12,12 +14,12 @@
     }
     .box-overlay {
         z-index: 1;
-        @include prefix(transition, all 500ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
+        @include mixins.prefix(transition, all 500ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
     } 
     &:hover {
         img{
-            @include prefix(transform, scale(1.1), webkit);
-            @include prefix(transition, all 500ms cubic-bezier(61, 10, 88, 10), webkit);
+            @include mixins.prefix(transform, scale(1.1), webkit);
+            @include mixins.prefix(transition, all 500ms cubic-bezier(61, 10, 88, 10), webkit);
         }
         .icon-box {
             opacity: 1;
@@ -33,7 +35,7 @@
 .services-box-style-02 { 
     .box-overlay {
         z-index: 1;
-        @include prefix(transition, all 450ms ease-in-out, webkit);
+        @include mixins.prefix(transition, all 450ms ease-in-out, webkit);
     }
     &.hover-box {
         &:hover { 
@@ -47,7 +49,7 @@
 /* Services box style 05 */  
 .services-box-style-05 {
     img {
-        @include prefix(transition, 0.3s, webkit);
+        @include mixins.prefix(transition, 0.3s, webkit);
         width: 100%;
     }
     figure {
@@ -97,8 +99,8 @@
     }
     &:hover {
         img{
-            @include prefix(transform, scale(1.1), webkit);
-            @include prefix(transition, all 500ms cubic-bezier(61, 10, 88, 10), webkit);
+            @include mixins.prefix(transform, scale(1.1), webkit);
+            @include mixins.prefix(transition, all 500ms cubic-bezier(61, 10, 88, 10), webkit);
         }
     }
 }
@@ -111,17 +113,17 @@
         top: 100%;
         width: 100%;
         height: 100%;
-        @include prefix(transition, all 0.3s linear, webkit);
+        @include mixins.prefix(transition, all 0.3s linear, webkit);
     }
     .text-down {
-        @include prefix(transition, all 0.3s linear, webkit);
+        @include mixins.prefix(transition, all 0.3s linear, webkit);
     }
     &:hover {
         .btn-hover {
             top: 0;
         }
         .text-down {  
-            @include prefix(transform, translateY(20px), webkit); 
+            @include mixins.prefix(transform, translateY(20px), webkit); 
         }
     }
 }

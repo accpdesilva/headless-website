@@ -1,4 +1,6 @@
-@include respond-to('tablet') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('tablet') {
     .html-video {
         height: 100%;
     }

@@ -1,4 +1,6 @@
-@include respond-to('mini-desktop') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('mini-desktop') {
     .tab-style-05 {
         .nav-tabs {
             .nav-item {
@@ -9,7 +11,7 @@
         }
     }
 }
-@include respond-to('laptop') {
+@include mixins.respond-to('laptop') {
     .tab-style-05 {
         .nav-tabs {
             .nav-item {
@@ -30,7 +32,7 @@
         }
     }
 }
-@include respond-to('tablet') {
+@include mixins.respond-to('tablet') {
     .tab-style-02 {
         .nav-tabs {
             > li {
@@ -82,7 +84,7 @@
         }
     }
 }
-@include respond-to('phone-landscape') {
+@include mixins.respond-to('phone-landscape') {
     .tab-style-01 {
         .nav-tabs {
             border-bottom:0;

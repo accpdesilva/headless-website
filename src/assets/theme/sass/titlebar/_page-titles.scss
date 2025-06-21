@@ -1,3 +1,5 @@
+@use "../mixins/mixins";
+
 /* ===================================
    11. Page title
 ====================================== */
@@ -97,7 +99,7 @@
 }
 .page-title-button-style {
     &.page-title-button-style {
-        @include prefix(transition, all 0.3s, webkit);
+        @include mixins.prefix(transition, all 0.3s, webkit);
     }
     h1{
         padding: 13px 30px;
@@ -123,7 +125,7 @@
     }
     &.down-bottom {
         bottom:0;
-        @include prefix(transform, translateY(50%), webkit);
+        @include mixins.prefix(transform, translateY(50%), webkit);
     }
 }
 
@@ -138,7 +140,7 @@
             content:"";
             height: 0;
             width: 100%;
-            @include prefix(transition, all 0.5s, webkit);
+            @include mixins.prefix(transition, all 0.5s, webkit);
             background-color: var(--base-color);
         } 
     }

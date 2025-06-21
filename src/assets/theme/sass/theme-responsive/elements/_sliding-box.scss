@@ -1,4 +1,6 @@
-@include respond-to('laptop') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('laptop') {
     .sliding-box {
         .sliding-box-item {
             width: 33.33% !important;
@@ -52,7 +54,7 @@
         }
     }
 }
-@include respond-to('tablet') {
+@include mixins.respond-to('tablet') {
     .sliding-box {
         justify-content: center;
         .sliding-box-item {
@@ -60,7 +62,7 @@
         }
     }
 }
-@include respond-to('phone-landscape') {
+@include mixins.respond-to('phone-landscape') {
     .sliding-box {  
         .sliding-box-item {
             width: 100% !important;

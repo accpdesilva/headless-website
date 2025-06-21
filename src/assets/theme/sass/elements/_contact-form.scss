@@ -1,3 +1,5 @@
+@use "../mixins/mixins";
+
 /* Contact form */
 .select-style {
     select {
@@ -48,7 +50,7 @@
             position: absolute;
             top: 5px;
             left: 0;
-            @include prefix(border-radius, 4px, webkit);
+            @include mixins.prefix(border-radius, 4px, webkit);
         }
         &:after {
             position: absolute;
@@ -76,14 +78,14 @@
         .form-icon {
             position: absolute;
             top: 50%;
-            @include prefix(transform, translateY(-50%), webkit);
+            @include mixins.prefix(transform, translateY(-50%), webkit);
             padding-top: 2px;
             left: 25px;
         }
         &.form-textarea {
             .form-icon {
                 top: 12px;
-                @include prefix(transform, translateY(0), webkit);
+                @include mixins.prefix(transform, translateY(0), webkit);
             }
         }
     }
@@ -116,12 +118,12 @@
             position: absolute;
             top: 50%;
             right: 5px;
-            @include prefix(transform, translateY(-50%), webkit);
+            @include mixins.prefix(transform, translateY(-50%), webkit);
         }
         &.form-textarea {
             .form-icon {
                 top: 10px;
-                @include prefix(transform, translateY(0), webkit);
+                @include mixins.prefix(transform, translateY(0), webkit);
             }
         }
     }
@@ -181,12 +183,12 @@
             position: absolute;
             top: 50%;
             right: 5px;
-            @include prefix(transform, translateY(-50%), webkit);
+            @include mixins.prefix(transform, translateY(-50%), webkit);
         }
         &.form-textarea {
             .form-icon {
                 top: 10px;
-                @include prefix(transform, translateY(0), webkit);
+                @include mixins.prefix(transform, translateY(0), webkit);
             }
         }
     }

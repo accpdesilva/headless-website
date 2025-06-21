@@ -1,3 +1,5 @@
+@use "../mixins/mixins";
+
 /* ===================================
     05. General
 ====================================== */
@@ -20,7 +22,7 @@
 
 /* Separator vertical line */
 .separator-line-vertical { 
-    @include prefix(transform, rotate(-90deg), webkit);
+    @include mixins.prefix(transform, rotate(-90deg), webkit);
 }
 
 /* Separator line size */
@@ -88,31 +90,31 @@
     left: 50%;
     top: 50%;
     position: absolute;
-    @include prefix(transform, translate(-50%, -50%), webkit);
+    @include mixins.prefix(transform, translate(-50%, -50%), webkit);
 }
 .absolute-middle-left {
     left: 0;
     top: 50%;
     position: absolute;
-    @include prefix(transform, translateY(-50%), webkit);
+    @include mixins.prefix(transform, translateY(-50%), webkit);
 }
 .absolute-middle-right {
     right: 0; 
     top: 50%;
     position: absolute;
-    @include prefix(transform, translateY(-50%), webkit);
+    @include mixins.prefix(transform, translateY(-50%), webkit);
 }
 .absolute-top-center {
     left: 50%;
     top: 0;
     position: absolute;
-    @include prefix(transform, translateX(-50%), webkit);
+    @include mixins.prefix(transform, translateX(-50%), webkit);
 }
 .absolute-bottom-center {
     left: 50%;
     bottom: 0;
     position: absolute;
-    @include prefix(transform, translateX(-50%), webkit);
+    @include mixins.prefix(transform, translateX(-50%), webkit);
 }
 .absolute-bottom-left {
     left: 0;
@@ -130,7 +132,7 @@
     display: flex;
     height: 100%;
     .title {  
-        @include prefix(transform, rotate(180deg), webkit);
+        @include mixins.prefix(transform, rotate(180deg), webkit);
         writing-mode: vertical-lr;
     } 
 }
@@ -161,18 +163,18 @@
     transform-origin: left;
 }
 .btn.btn-none-transform, .btn.btn-none-transform:hover {
-    @include prefix(transform, translate3d(0, 0, 0), webkit);
+    @include mixins.prefix(transform, translate3d(0, 0, 0), webkit);
 }
 
 /* Transition */
 .transition { 
-    @include prefix(transition, all 400ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
+    @include mixins.prefix(transition, all 400ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
 }
 .transition-inner-all * {
-    @include prefix(transition, all 400ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
+    @include mixins.prefix(transition, all 400ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
 }
 .no-transition {
-    @include prefix(transition, 0s, webkit); 
+    @include mixins.prefix(transition, 0s, webkit); 
 }
 
 /* Pointer events */
@@ -190,7 +192,7 @@
     left: 0; 
     opacity: 0;
     z-index: 1;
-    @include prefix(transform, rotate(-90deg) translate(-50%,50%), webkit);
+    @include mixins.prefix(transform, rotate(-90deg) translate(-50%,50%), webkit);
     transform-origin: 0 50%;
     transition:1s cubic-bezier(0.7, 0, 0.3, 1) !important; 
     &.shadow-in {
@@ -381,48 +383,48 @@
 
 /* Box shadow */
 .box-shadow, .box-shadow-hover:hover {
-    @include box-shadow(0 0 10px rgba(0,0,0,.08)); 
-    @include prefix(transition, 350ms ease-in-out, webkit);
+    @include mixins.box-shadow(0 0 10px rgba(0,0,0,.08)); 
+    @include mixins.prefix(transition, 350ms ease-in-out, webkit);
 }
 .box-shadow-small, .box-shadow-small-hover:hover {
-    @include box-shadow(0 0 15px rgba(0,0,0,.08));
-    @include prefix(transition, all 350ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
+    @include mixins.box-shadow(0 0 15px rgba(0,0,0,.08));
+    @include mixins.prefix(transition, all 350ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
 }
 .box-shadow-medium, .box-shadow-medium-hover:hover {
-    @include box-shadow(0 0 20px rgba(0,0,0,.08));
-    @include prefix(transition, all 350ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
+    @include mixins.box-shadow(0 0 20px rgba(0,0,0,.08));
+    @include mixins.prefix(transition, all 350ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
 }
 .box-shadow-medium-bottom, .box-shadow-medium-bottom-hover:hover {
-    @include box-shadow(0 10px 20px rgba(0,0,0,.08));
-    @include prefix(transition, all 350ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
+    @include mixins.box-shadow(0 10px 20px rgba(0,0,0,.08));
+    @include mixins.prefix(transition, all 350ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
 }
 .box-shadow-large, .box-shadow-large-hover:hover {
-    @include box-shadow(0 0 25px rgba(0,0,0,.08));
-    @include prefix(transition, all 350ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
+    @include mixins.box-shadow(0 0 25px rgba(0,0,0,.08));
+    @include mixins.prefix(transition, all 350ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
 }
 .box-shadow-extra-large, .box-shadow-extra-large-hover:hover {
-    @include box-shadow(0 0 30px rgba(0,0,0,.08));
-    @include prefix(transition, all 350ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
+    @include mixins.box-shadow(0 0 30px rgba(0,0,0,.08));
+    @include mixins.prefix(transition, all 350ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
 }
 .box-shadow-double-large, .box-shadow-double-large-hover:hover {
-    @include box-shadow(0 0 45px rgba(0,0,0,.09));
-    @include prefix(transition, all 350ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
+    @include mixins.box-shadow(0 0 45px rgba(0,0,0,.09));
+    @include mixins.prefix(transition, all 350ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
 }
 .box-shadow-triple-large, .box-shadow-triple-large-hover:hover {
-    @include box-shadow(0 0 60px rgba(0,0,0,.2));
-    @include prefix(transition, all 350ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
+    @include mixins.box-shadow(0 0 60px rgba(0,0,0,.2));
+    @include mixins.prefix(transition, all 350ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
 }
 .box-shadow-quadruple-large, .box-shadow-quadruple-large-hover:hover {
-    @include box-shadow(0 20px 60px rgba(0,0,0,.08));
-    @include prefix(transition, all 350ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
+    @include mixins.box-shadow(0 20px 60px rgba(0,0,0,.08));
+    @include mixins.prefix(transition, all 350ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
 }
 .box-shadow-hover, .box-shadow-large-hover, .box-shadow-extra-large-hover, .box-shadow-medium-hover, .box-shadow-small-hover, .box-shadow-double-large-hover, .box-shadow-quadruple-large-hover {
     &:hover {
-        @include prefix(transform, translate3d(0, -3px, 0), webkit);
+        @include mixins.prefix(transform, translate3d(0, -3px, 0), webkit);
     }
 }
 .box-shadow-bottom {
-    @include box-shadow(0px 10px 15px 0px rgba(0,0,0,.05));
+    @include mixins.box-shadow(0px 10px 15px 0px rgba(0,0,0,.05));
 }
 
 /* Input */
@@ -437,7 +439,7 @@ input, select, textarea, .form-control, .form-select {
     color: var(--medium-gray);
     line-height: inherit;
     word-break: normal;
-    @include prefix(transition, 0.3s, webkit);
+    @include mixins.prefix(transition, 0.3s, webkit);
 }
 .form-select {
     color: var(--medium-gray);
@@ -567,12 +569,12 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
     height: 100%;
     opacity: 0;
     visibility: hidden;
-    @include prefix(transition, all 400ms cubic-bezier(0.5, 1, 0.89, 1), webkit);
+    @include mixins.prefix(transition, all 400ms cubic-bezier(0.5, 1, 0.89, 1), webkit);
 }
 .hover-box {
     z-index: 1;
     * {
-        @include prefix(transition, all 500ms cubic-bezier(0.5, 1, 0.89, 1), webkit);
+        @include mixins.prefix(transition, all 500ms cubic-bezier(0.5, 1, 0.89, 1), webkit);
         will-change: transform;
     }
     &:hover {
@@ -675,7 +677,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
         left: 50%;
         width: auto;
         cursor: default;
-        @include prefix(transform, translateX(-50%), webkit);
+        @include mixins.prefix(transform, translateX(-50%), webkit);
     }
     >.swiper-pagination-bullets-right {
         bottom: auto;
@@ -683,7 +685,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
         right: 60px;
         left: auto;
         width:auto;
-        @include prefix(transform, translateY(-50%), webkit);
+        @include mixins.prefix(transform, translateY(-50%), webkit);
         text-align: right;
         .swiper-pagination-bullet {
             display: block;
@@ -698,7 +700,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
         margin: 0 15px !important;
         opacity: 1;
         background-color: var(--light-gray);
-        @include prefix(transition, 0.3s, webkit);
+        @include mixins.prefix(transition, 0.3s, webkit);
         outline: none;
         &:before {
             content: '';
@@ -711,8 +713,8 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
             position: relative;
             top: 50%;
             left: 50%; 
-            @include prefix(transform, translate(-50%, -50%), webkit);
-            @include prefix(transition, 0.3s, webkit);
+            @include mixins.prefix(transform, translate(-50%, -50%), webkit);
+            @include mixins.prefix(transition, 0.3s, webkit);
             opacity: 0;
         }
         &:hover {
@@ -737,7 +739,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
         display: inline-block;
         vertical-align: middle;
         background-color: var(--white);
-        @include prefix(transition, 0.3s, webkit);
+        @include mixins.prefix(transition, 0.3s, webkit);
         outline: none;
         opacity:0.5;
         &:before {
@@ -751,8 +753,8 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
             position: relative;
             top: 50%;
             left: 50%;
-            @include prefix(transform, translate(-50%, -50%), webkit);
-            @include prefix(transition, 0.3s, webkit);
+            @include mixins.prefix(transform, translate(-50%, -50%), webkit);
+            @include mixins.prefix(transition, 0.3s, webkit);
             opacity: 0;
         }
         &:hover {
@@ -796,7 +798,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
         &:hover, &.swiper-pagination-bullet-active {
             background-color: var(--white);
             opacity: 1;
-            @include prefix(transform, scale(1.3), webkit);
+            @include mixins.prefix(transform, scale(1.3), webkit);
         }
         &:before {
             display:none;
@@ -852,13 +854,13 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
             height: 100px;
             margin: 0 15px!important;
             background-size: cover;
-            @include prefix(transition, 0.3s, webkit);
+            @include mixins.prefix(transition, 0.3s, webkit);
             -webkit-filter: grayscale(1);
             filter: grayscale(1);
             &.swiper-pagination-bullet-active {
                 -webkit-filter: grayscale(0);
                 filter: grayscale(0);
-                @include prefix(transform, scale(1.2), webkit);
+                @include mixins.prefix(transform, scale(1.2), webkit);
                 opacity: 1;
             }
         }
@@ -882,7 +884,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
             color: var(--white);
             opacity: 0.7;
             width: auto;
-            @include prefix(transition, 0.5s, webkit);
+            @include mixins.prefix(transition, 0.5s, webkit);
             height: auto;
             background: transparent;
             border-radius: 0; 
@@ -902,7 +904,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
                 display:inline-block;
                 background:var(--white);
                 vertical-align:middle;
-                @include prefix(transition, 0.5s, webkit);
+                @include mixins.prefix(transition, 0.5s, webkit);
             }
         }
     }
@@ -924,7 +926,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
             margin:10px 0 !important;
             opacity: 0.7;
             width: 56px;
-            @include prefix(transition, 0.4s, webkit);
+            @include mixins.prefix(transition, 0.4s, webkit);
             height: 56px;
             background: transparent;
             border-radius: 100%; 
@@ -935,8 +937,8 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
                 opacity:1;  
                 &:before {
                     opacity:1;
-                    @include prefix(transform, scale(1), webkit); 
-                    @include prefix(transition, 0.4s, webkit);
+                    @include mixins.prefix(transform, scale(1), webkit); 
+                    @include mixins.prefix(transition, 0.4s, webkit);
                     background: rgba(0,0,0,.45);
                     z-index: -1;
                 }
@@ -949,7 +951,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
                 position:absolute;
                 top:0;
                 left:0;  
-                @include prefix(transform, scale(0.7), webkit); 
+                @include mixins.prefix(transform, scale(0.7), webkit); 
             }
         }
     }
@@ -1037,7 +1039,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
         height: 100%;
         width: var(--swiper-progress, 0);
         background-color: var(--base-color);  
-        @include prefix(transition, 0.4s, webkit);
+        @include mixins.prefix(transition, 0.4s, webkit);
     }
 }
 
@@ -1047,7 +1049,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
         position: absolute;
         right: 40px;
         top: 50%;
-        @include prefix(transform, translateY(-50%), webkit);
+        @include mixins.prefix(transform, translateY(-50%), webkit);
         z-index: 99; 
         .swiper-progress {
             position: absolute;
@@ -1056,7 +1058,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
             width: 2px;
             height: var(--swiper-progress, 0);
             background-color: var(--dark-gray);  
-            @include prefix(transition, 0.4s, webkit);
+            @include mixins.prefix(transition, 0.4s, webkit);
         }
         .pagination-progress-vertical {
             transform: rotate(180deg);
@@ -1103,8 +1105,8 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    @include prefix(transform, translateY(-50%), webkit);
-    @include prefix(transition, 0.3s, webkit);
+    @include mixins.prefix(transform, translateY(-50%), webkit);
+    @include mixins.prefix(transition, 0.3s, webkit);
     &:hover {
         opacity: 0.8;
     }
@@ -1118,9 +1120,9 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
     position: absolute;
     top: 50%;
     left: 65px;
-    @include prefix(border-radius, 100%, webkit);
-    @include prefix(transform, translateY(-50%), webkit); 
-    @include prefix(transition, 0.3s, webkit);
+    @include mixins.prefix(border-radius, 100%, webkit);
+    @include mixins.prefix(transform, translateY(-50%), webkit); 
+    @include mixins.prefix(transition, 0.3s, webkit);
     &.swiper-button-next {
         right: 65px;
         left: inherit;
@@ -1135,7 +1137,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
     position: absolute;
     top: 50%;
     left: 0; 
-    @include prefix(transform, translateY(-50%), webkit);
+    @include mixins.prefix(transform, translateY(-50%), webkit);
     z-index: 99;
     &.swiper-button-next {
         right: 0;
@@ -1151,15 +1153,15 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
     width: 40px;
     height: 40px;
     background: var(--white);
-    @include prefix(border-radius, 100%, webkit);
-    @include prefix(transform, translateY(-50%), webkit); 
-    @include prefix(transition, 0.3s, webkit);
+    @include mixins.prefix(border-radius, 100%, webkit);
+    @include mixins.prefix(transform, translateY(-50%), webkit); 
+    @include mixins.prefix(transition, 0.3s, webkit);
     &.swiper-button-next {
         right: -60px;
         left: inherit;
     }
     &:hover {
-        @include box-shadow(0px 0 20px rgba(35, 35, 35, 0.1));
+        @include mixins.box-shadow(0px 0 20px rgba(35, 35, 35, 0.1));
     }
 }
 
@@ -1172,10 +1174,10 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
     bottom: inherit;
     left: 0;
     top: inherit;
-    @include prefix(transform, translateY(0px), webkit);
-    @include prefix(transition, 0.3s, webkit);
+    @include mixins.prefix(transform, translateY(0px), webkit);
+    @include mixins.prefix(transition, 0.3s, webkit);
     i{
-        @include prefix(transition, 0.3s, webkit);
+        @include mixins.prefix(transition, 0.3s, webkit);
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -1220,10 +1222,10 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
     top:inherit;
     width: 75px;
     height: 75px; 
-    @include prefix(transform, translateX(-100%), webkit);
+    @include mixins.prefix(transform, translateX(-100%), webkit);
     &.swiper-button-next { 
         bottom:1px;
-        @include prefix(transform, translate(-100%, -100%), webkit); 
+        @include mixins.prefix(transform, translate(-100%, -100%), webkit); 
     }
 }
 
@@ -1232,7 +1234,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
     width: auto;
     height: auto;
     position: relative;
-    @include prefix(transform, translateX(0px), webkit);
+    @include mixins.prefix(transform, translateX(0px), webkit);
     left:0;
     &.swiper-button-next {
         right: 0;
@@ -1243,7 +1245,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
 /* Slider custom text */ 
 .slider-custom-verticle-text {
     > span {
-        @include prefix(transform, rotate(-90deg), webkit);
+        @include mixins.prefix(transform, rotate(-90deg), webkit);
     }
 }
 .swiper-button-prev, .swiper-button-next {
@@ -1251,7 +1253,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
         width: auto;
         height: auto;
         min-height: 125px;
-        @include prefix(transition, 0.3s, webkit);
+        @include mixins.prefix(transition, 0.3s, webkit);
         -webkit-user-select: none;
         -ms-user-select: none;
         user-select: none;
@@ -1350,21 +1352,21 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
 @-webkit-keyframes video-icon-sonar {
     0% {
         opacity: 1; 
-        @include prefix(transform, scale(0.1), webkit);
+        @include mixins.prefix(transform, scale(0.1), webkit);
     }
     100% {
         opacity: 0; 
-        @include prefix(transform, scale(1.10), webkit);
+        @include mixins.prefix(transform, scale(1.10), webkit);
     }
 }
 @keyframes video-icon-sonar {
     0% {
         opacity: 1;
-        @include prefix(transform, scale(0.1), webkit);
+        @include mixins.prefix(transform, scale(0.1), webkit);
     }
     100% {
         opacity: 0; 
-        @include prefix(transform, scale(1.10), webkit);
+        @include mixins.prefix(transform, scale(1.10), webkit);
     }
 }
 .video-icon-box {
@@ -1389,14 +1391,14 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
         .play-icon, .pause-icon { 
             position: absolute; 
             left: 50%;
-            @include prefix(transform, translate(-50%, -50%), webkit);
+            @include mixins.prefix(transform, translate(-50%, -50%), webkit);
         }
         .play-icon, .pause-icon { 
             opacity: 1; 
             top: 50%; 
             padding-left: 5px;
             visibility: visible; 
-            @include prefix(transition, all 0.4s linear, webkit); 
+            @include mixins.prefix(transition, all 0.4s linear, webkit); 
         }
         .pause-icon {
             top: 100%;
@@ -1634,7 +1636,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
 [data-parallax-liquid] {
     overflow: hidden; 
     will-change: transform; 
-    @include prefix(transform, translateY(0), webkit);
+    @include mixins.prefix(transform, translateY(0), webkit);
     transition: transform .8s cubic-bezier(.23,1,.32,1); 
     .liquid-parallax {
         will-change: transform; 
@@ -1745,7 +1747,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
                 left: 50%;
                 top: 10px;
                 line-height: normal;
-                @include prefix(transform, translateX(-50%), webkit);
+                @include mixins.prefix(transform, translateX(-50%), webkit);
             }
             &:after { 
                 content: "\e842";
@@ -1979,8 +1981,8 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
             left: 0;
             top: 0;
             pointer-events: none;
-            @include prefix(border-radius, 50%, webkit);
-            @include prefix(transform, translateZ(0), webkit);
+            @include mixins.prefix(border-radius, 50%, webkit);
+            @include mixins.prefix(transform, translateZ(0), webkit);
             visibility: hidden;
             opacity: 0;
             transition: opacity .65s cubic-bezier(.23,1,.32,1);
@@ -2009,7 +2011,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
             border: 1px solid  var(--base-color);  
             z-index: 10000000;
             opacity: .8;
-            @include prefix(transition, 0.1s, webkit);
+            @include mixins.prefix(transition, 0.1s, webkit);
         } 
         .cursor-link {
             &.circle-cursor-inner {
@@ -2219,10 +2221,10 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
     right: 20px;
     z-index: 111;
     top: 50%;
-    @include prefix(transition, all 0.3s linear, webkit);
+    @include mixins.prefix(transition, all 0.3s linear, webkit);
     opacity: 0;
     visibility: hidden;
-    @include prefix(transform, translateY(-50%), webkit);
+    @include mixins.prefix(transform, translateY(-50%), webkit);
     mix-blend-mode: difference;
     &.visible {
         opacity: 1;
@@ -2251,7 +2253,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
         left: 0px;
     }
     .scroll-text { 
-        @include prefix(transform, rotate(180deg), webkit);
+        @include mixins.prefix(transform, rotate(180deg), webkit);
         writing-mode: vertical-lr;
         margin-bottom: 15px;
         color: var(--white); 
@@ -2309,7 +2311,7 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
         }
     }
     &.active { 
-        @include prefix(transform, translateX(-100%), webkit); 
+        @include mixins.prefix(transform, translateX(-100%), webkit); 
         box-shadow: 0 0 45px 0 rgba(0, 0, 0, 0.25); 
     }
     .grid { 

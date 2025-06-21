@@ -1,4 +1,6 @@
-@include respond-to('desktop') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('desktop') {
     /* Width */ 
     .xxl-w-100 { width: 100% !important;}
     /* Outside box right */  
@@ -6,7 +8,7 @@
         margin-right: -7vw;
     }
 }
-@include respond-to('mini-desktop') { 
+@include mixins.respond-to('mini-desktop') { 
     /* Width */   
     .xl-w-220px { 
         width:220px !important; 
@@ -159,7 +161,7 @@
         }
     } 
 }
-@include respond-to('laptop') {
+@include mixins.respond-to('laptop') {
     /* Screen height */ 
     .one-fifth-screen { height:750px !important; }
     /* Width */ 
@@ -696,7 +698,7 @@
         display: none !important; 
     }
 }
-@include respond-to('tablet') {
+@include mixins.respond-to('tablet') {
     /* Screen height */
     .md-extra-small-screen {
         height:300px !important;
@@ -1328,7 +1330,7 @@
         right: auto; 
         top: 50%; 
         position: absolute; 
-        @include prefix(transform, translate(-50%, -50%), webkit); 
+        @include mixins.prefix(transform, translate(-50%, -50%), webkit); 
     }
     /* Swiper navigation style 07 */
     .slider-navigation-style-06 {
@@ -1345,9 +1347,9 @@
     }
     /* Swiper navigation style 07 */
     .slider-navigation-style-07 { 
-        @include prefix(transform, translateX(-190px), webkit);
+        @include mixins.prefix(transform, translateX(-190px), webkit);
         &.swiper-button-next {
-            @include prefix(transform, translate(-190px, -100%), webkit);
+            @include mixins.prefix(transform, translate(-190px, -100%), webkit);
         }
     }
     /* Slider parallax */
@@ -1402,7 +1404,7 @@
         }
     }
 }
-@include respond-to('phone-landscape') {
+@include mixins.respond-to('phone-landscape') {
     /* Screen height */
     .sm-extra-small-screen {
         height:300px !important;
@@ -1939,13 +1941,13 @@
         top: 50%;
         width: 50px;
         height: 50px; 
-        @include prefix(transform, translateX(0), webkit);
-        @include prefix(transform, translateY(-13px), webkit);
+        @include mixins.prefix(transform, translateX(0), webkit);
+        @include mixins.prefix(transform, translateY(-13px), webkit);
         &.swiper-button-next { 
             bottom:initial;
             right: 0;
             left:initial;  
-            @include prefix(transform, translate(0px, -100%), webkit); 
+            @include mixins.prefix(transform, translate(0px, -100%), webkit); 
         }
     }
     /* Background image */
@@ -2084,7 +2086,7 @@
     }
     /* Swiper navigation style 07 */
     .slider-navigation-style-07 { 
-        @include prefix(transform, translateY(-100%), webkit);
+        @include mixins.prefix(transform, translateY(-100%), webkit);
     }
     /* Text white space */
     .sm-text-white-space-nowrap {
@@ -2121,7 +2123,7 @@
     }
     /* Vertical title center */
     .sm-vertical-title-inherit .title {  
-        @include prefix(transform, rotate(0deg), webkit);
+        @include mixins.prefix(transform, rotate(0deg), webkit);
         writing-mode: inherit;
     }
     /* Father shadow */
@@ -2142,7 +2144,7 @@
         max-width: 330px;
     }
 }
-@include respond-to('phone-portrait') {
+@include mixins.respond-to('phone-portrait') {
     /* Screen height */
     .xs-extra-small-screen {
         height:300px !important;
@@ -2759,7 +2761,7 @@
     }
     /* Vertical title center */
     .xs-vertical-title-inherit .title {  
-        @include prefix(transform, rotate(0deg), webkit);
+        @include mixins.prefix(transform, rotate(0deg), webkit);
         writing-mode: inherit;
     }
     /* Scrolling text */ 

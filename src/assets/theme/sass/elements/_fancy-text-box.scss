@@ -1,3 +1,5 @@
+@use "../mixins/mixins";
+
 /* Fancy text box style 01 */  
 .fancy-text-box-style-01 { 
     border-bottom: 1px solid; 
@@ -6,7 +8,7 @@
     .text-box-wrapper {
         .text-box, .text-box-hover {
             display: block; width: 100%; 
-            @include prefix(transition, all 0.6s cubic-bezier(0.12, 0, 0.39, 0), webkit);  
+            @include mixins.prefix(transition, all 0.6s cubic-bezier(0.12, 0, 0.39, 0), webkit);  
         }
         .text-box-hover {
             opacity: 0; 
@@ -16,13 +18,13 @@
             .text-box {
                 opacity: 0; 
                 visibility: hidden; 
-                @include prefix(transform, translateY(-100%), webkit);
-                @include prefix(transition, all 0.6s cubic-bezier(0.12, 0, 0.39, 0), webkit);
+                @include mixins.prefix(transform, translateY(-100%), webkit);
+                @include mixins.prefix(transition, all 0.6s cubic-bezier(0.12, 0, 0.39, 0), webkit);
             } 
             .text-box-hover {
                 opacity: 1; 
-                @include prefix(transform, translateY(-100%), webkit);
-                @include prefix(transition, all 0.6s cubic-bezier(0.12, 0, 0.39, 0), webkit); 
+                @include mixins.prefix(transform, translateY(-100%), webkit);
+                @include mixins.prefix(transition, all 0.6s cubic-bezier(0.12, 0, 0.39, 0), webkit); 
             }
         }
     }

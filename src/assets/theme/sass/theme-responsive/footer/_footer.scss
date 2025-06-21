@@ -1,9 +1,11 @@
-@include respond-to('desktop') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('desktop') {
     footer {
         padding-top: 90px; padding-bottom: 90px;
     }
 }
-@include respond-to('tablet') {
+@include mixins.respond-to('tablet') {
     footer {
         padding-top: 75px; padding-bottom: 75px;
         &.half-footer {
@@ -14,7 +16,7 @@
         position: relative!important;
     }
 }
-@include respond-to('phone-landscape') {
+@include mixins.respond-to('phone-landscape') {
     footer {
         padding-top: 50px; 
         padding-bottom: 50px;

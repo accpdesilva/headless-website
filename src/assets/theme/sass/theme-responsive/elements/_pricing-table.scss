@@ -1,4 +1,6 @@
-@include respond-to('tablet') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('tablet') {
     .pricing-table-style-01, .pricing-table-style-02 {
         &.popular-item {
             margin-top: 0;
@@ -11,7 +13,7 @@
         }
     }
 }
-@include respond-to('phone-portrait') {
+@include mixins.respond-to('phone-portrait') {
     .pricing-table-style-04 { 
         .accordion-item {
             padding-left: 30px;

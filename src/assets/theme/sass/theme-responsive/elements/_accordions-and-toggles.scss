@@ -1,4 +1,6 @@
-@include respond-to('phone-landscape') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('phone-landscape') {
     .accordion-style-04 {
         .accordion-item {
             .accordion-header {
@@ -27,7 +29,7 @@
         }
     }
 }
-@include respond-to('phone-portrait') {
+@include mixins.respond-to('phone-portrait') {
     .accordion-style-05 {
         .accordion-item {
             padding: 18px 20px 20px 55px;

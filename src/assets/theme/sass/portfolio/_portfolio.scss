@@ -1,3 +1,5 @@
+@use "../mixins/mixins";
+
 /* ===================================
    15. Portfolio
 ====================================== */
@@ -47,14 +49,14 @@
                 &:hover, &:focus, &.active {
                     background-color: var(--white);
                     color: var(--dark-gray);
-                    @include box-shadow(0 0 25px rgba(0,0,0,.08));
+                    @include mixins.box-shadow(0 0 25px rgba(0,0,0,.08));
                 } 
             }
             &.active {
                 a {
                     background-color: var(--white);
                     color: var(--dark-gray);
-                    @include box-shadow(0 0 10px rgba(0,0,0,.08));
+                    @include mixins.box-shadow(0 0 10px rgba(0,0,0,.08));
                 }
             }
         }
@@ -76,7 +78,7 @@
             .portfolio-image {
                 img {
                     opacity: 0.15;
-                    @include prefix(filter, blur(4px), webkit);
+                    @include mixins.prefix(filter, blur(4px), webkit);
                 }
             }
             .portfolio-hover { 
@@ -95,7 +97,7 @@
             a {
                 margin: 0 4px;
                 position: relative;
-                @include box-shadow(0 0 25px 0 rgba(0, 0, 0, .5));
+                @include mixins.box-shadow(0 0 25px 0 rgba(0, 0, 0, .5));
             }
         }
         .portfolio-overlay {
@@ -107,11 +109,11 @@
             z-index: -1;
             opacity: 0;
             visibility: hidden;
-            @include prefix(transition, all 0.2s linear, webkit);
+            @include mixins.prefix(transition, all 0.2s linear, webkit);
         }
         &:hover {
-            @include box-shadow(10px 0 70px rgba(0, 0, 0, .15));
-            @include prefix(transform, translateY(-5px), webkit);
+            @include mixins.box-shadow(10px 0 70px rgba(0, 0, 0, .15));
+            @include mixins.prefix(transform, translateY(-5px), webkit);
             .portfolio-image {
                 img {
                     opacity: 0.3;
@@ -152,18 +154,18 @@
         .caption {
             padding: 22px 28px 11px;
             white-space: nowrap;
-            @include box-shadow(0 0 25px rgba(0,0,0,.2));
+            @include mixins.box-shadow(0 0 25px rgba(0,0,0,.2));
         }
         .portfolio-image {
             overflow: visible;
             img {
-                @include prefix(transition, all 0.6s linear, webkit);
+                @include mixins.prefix(transition, all 0.6s linear, webkit);
             }
         }
         &:hover {
             .portfolio-image {
                 img {
-                    @include prefix(transform, scale(1.1), webkit);
+                    @include mixins.prefix(transform, scale(1.1), webkit);
                 }
             }
         }
@@ -175,7 +177,7 @@
     .portfolio-box {
         will-change: transform;
         .portfolio-title {
-            @include prefix(transform, scale(2), webkit);
+            @include mixins.prefix(transform, scale(2), webkit);
             display: block;
             width: 100%;
             &::before {        
@@ -185,7 +187,7 @@
                 left: 0;
                 width: 100%;
                 z-index: 1;
-                @include prefix(transform, translateY(-50%), webkit);
+                @include mixins.prefix(transform, translateY(-50%), webkit);
 
             }
             &::after {        
@@ -206,7 +208,7 @@
         }
         .portfolio-hover {
             span {
-                @include prefix(transform, translateY(25px), webkit);
+                @include mixins.prefix(transform, translateY(25px), webkit);
             }
         }
         &:hover {
@@ -216,11 +218,11 @@
                 }
             }
             .portfolio-title {
-                @include prefix(transform, scale(1), webkit);
+                @include mixins.prefix(transform, scale(1), webkit);
             }
             .portfolio-hover {
                 span {
-                    @include prefix(transform, translateY(0), webkit);
+                    @include mixins.prefix(transform, translateY(0), webkit);
                 }
             }
         }
@@ -234,10 +236,10 @@
             a {
                 margin: 0 5px;
                 position: relative;
-                @include prefix(transition-delay, 0.1s, webkit);
-                @include box-shadow(0 0 20px rgba(0,0,0,.3));
+                @include mixins.prefix(transition-delay, 0.1s, webkit);
+                @include mixins.box-shadow(0 0 20px rgba(0,0,0,.3));
                 &:last-child {
-                    @include prefix(transition-delay, 0.2s, webkit);
+                    @include mixins.prefix(transition-delay, 0.2s, webkit);
                 }
             }
         }
@@ -245,7 +247,7 @@
             .portfolio-image {
                 img {
                     opacity: 0.5;
-                    @include prefix(transform, scale(1.1), webkit);
+                    @include mixins.prefix(transform, scale(1.1), webkit);
                 }
             }
         }
@@ -264,7 +266,7 @@
             width: calc(100% - 40px);
             height: auto;
             top: inherit;
-            @include prefix(transform, translateY(0) scale(1, 0), webkit);
+            @include mixins.prefix(transform, translateY(0) scale(1, 0), webkit);
             transform-origin: bottom center;
 
             > * {
@@ -292,12 +294,12 @@
             filter: blur(0);
             .portfolio-image{
                 img{
-                    @include prefix(transform, scale(1.1), webkit);
+                    @include mixins.prefix(transform, scale(1.1), webkit);
                 }
             }
             .portfolio-hover {
-                @include box-shadow(0 0 15px rgba(0,0,0,.20));
-                @include prefix(transform, translateY(0) scale(1, 1), webkit);
+                @include mixins.box-shadow(0 0 15px rgba(0,0,0,.20));
+                @include mixins.prefix(transform, translateY(0) scale(1, 1), webkit);
                 opacity: 1;
                 > * {
                     > * {
@@ -335,7 +337,7 @@
         position: relative; 
         .portfolio-image {
             img {
-                @include prefix(transition, all 500ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
+                @include mixins.prefix(transition, all 500ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
             }
         }
         .portfolio-hover { 
@@ -371,18 +373,18 @@
 /* Portfolio simple */ 
 .portfolio-slider {
     .portfolio-box {
-        @include prefix(transform, translateY(0), webkit);
-        @include prefix(transition, all .65s cubic-bezier(.05,.2,.1,1), webkit);
+        @include mixins.prefix(transform, translateY(0), webkit);
+        @include mixins.prefix(transition, all .65s cubic-bezier(.05,.2,.1,1), webkit);
         .portfolio-image {
             img {
-                @include prefix(transition, all .65s cubic-bezier(.05,.2,.1,1), webkit);
+                @include mixins.prefix(transition, all .65s cubic-bezier(.05,.2,.1,1), webkit);
             }
         }
         .portfolio-hover {
             opacity: 1;
             .portfolio-link {
                 .category {
-                    @include prefix(transform, translateY(0), webkit);
+                    @include mixins.prefix(transform, translateY(0), webkit);
                     opacity: 1;
                     visibility: visible;
                 }
@@ -390,17 +392,17 @@
                     position: absolute;
                     right: 0;
                     will-change: transform;
-                    @include prefix(transform, translateY(0), webkit);
+                    @include mixins.prefix(transform, translateY(0), webkit);
                     opacity: 0;
                 }
             }
         }
         &:hover {
-            @include prefix(transform, translateY(-5px), webkit);
+            @include mixins.prefix(transform, translateY(-5px), webkit);
             .portfolio-image {
                 img {
                     opacity: 0.6;
-                    @include prefix(transform, scale(1.1), webkit);
+                    @include mixins.prefix(transform, scale(1.1), webkit);
                 }
             }
             .portfolio-hover {
@@ -426,12 +428,12 @@
                 }
                 .portfolio-link {
                     .category {
-                        @include prefix(transform, translateY(-20px), webkit);
+                        @include mixins.prefix(transform, translateY(-20px), webkit);
                         opacity: 0;
                         visibility: hidden;
                     }
                     i {
-                        @include prefix(transform, translateY(-28px), webkit);
+                        @include mixins.prefix(transform, translateY(-28px), webkit);
                         opacity: 1;
                     }
                 }
@@ -451,11 +453,11 @@
         .portfolio-image {
             -webkit-clip-path: inset(0 0 0 0);
             clip-path: inset(0 0 0 0);
-            @include prefix(transition, all 600ms cubic-bezier(0.37, 0, 0.63, 1), webkit);            
+            @include mixins.prefix(transition, all 600ms cubic-bezier(0.37, 0, 0.63, 1), webkit);            
         }
         .portfolio-hover {
-            @include prefix(transform, translateY(35px), webkit);
-            @include prefix(transition, all 400ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
+            @include mixins.prefix(transform, translateY(35px), webkit);
+            @include mixins.prefix(transition, all 400ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
             .portfolio-title {
                 -webkit-box-flex: 1;
                 -ms-flex: 1;
@@ -467,12 +469,12 @@
                 -webkit-clip-path: inset(0 0 70px 0);
                 clip-path: inset(0 0 70px 0);                
                 img {
-                    @include prefix(transform, translateY(-40px), webkit);
+                    @include mixins.prefix(transform, translateY(-40px), webkit);
                 }
             }
             .portfolio-hover {
-                @include prefix(transform, translateY(0), webkit);
-                @include prefix(transition, all 600ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
+                @include mixins.prefix(transform, translateY(0), webkit);
+                @include mixins.prefix(transition, all 600ms cubic-bezier(0.37, 0, 0.63, 1), webkit);
             }
         }
     }
@@ -489,15 +491,15 @@
                 width: 100%;
                 height: 100%;
                 opacity: 0;
-                @include prefix(transform, scale3d(1.1,1.1,1.1), webkit); 
+                @include mixins.prefix(transform, scale3d(1.1,1.1,1.1), webkit); 
             }
         }
         &:hover {
-            @include prefix(transform, translateY(-5px), webkit); 
+            @include mixins.prefix(transform, translateY(-5px), webkit); 
             .portfolio-image {
                 .hover-switch-image {
                     opacity: 1;
-                    @include prefix(transform, scale3d(1,1,1), webkit);
+                    @include mixins.prefix(transform, scale3d(1,1,1), webkit);
                 }
             }
         }
@@ -509,19 +511,19 @@
     overflow: hidden;
     will-change: transform;
     .move-top-bottom {
-        @include prefix(transform, translateY(-15px), webkit);
+        @include mixins.prefix(transform, translateY(-15px), webkit);
         opacity: 0;
     }
     .move-bottom-top {
-        @include prefix(transform, translateY(15px), webkit);
+        @include mixins.prefix(transform, translateY(15px), webkit);
         opacity: 0;
     }
     .move-left-right {
-        @include prefix(transform, translateX(-15px), webkit);
+        @include mixins.prefix(transform, translateX(-15px), webkit);
         opacity: 0;
     }
     .move-right-left {
-        @include prefix(transform, translateX(15px), webkit);
+        @include mixins.prefix(transform, translateX(15px), webkit);
         opacity: 0;
     }
     .move-bottom-top-self {
@@ -530,8 +532,8 @@
             opacity: 0;
             display: block;
             will-change: transform;
-            @include prefix(transform, translateY(50%), webkit);
-            @include prefix(transition, all .5s cubic-bezier(0.37, 0.31, 0.2, 0.85), webkit);
+            @include mixins.prefix(transform, translateY(50%), webkit);
+            @include mixins.prefix(transition, all .5s cubic-bezier(0.37, 0.31, 0.2, 0.85), webkit);
         }
     }
     .move-top-bottom-self {
@@ -540,8 +542,8 @@
             opacity: 0;
             display: block;
             will-change: transform;
-            @include prefix(transform, translateY(-50%), webkit);
-            @include prefix(transition, all .5s cubic-bezier(0.37, 0.31, 0.2, 0.85), webkit);
+            @include mixins.prefix(transform, translateY(-50%), webkit);
+            @include mixins.prefix(transition, all .5s cubic-bezier(0.37, 0.31, 0.2, 0.85), webkit);
         }
     }
     .move-left-right-self {
@@ -550,8 +552,8 @@
             opacity: 0;
             display: block;
             will-change: transform;
-            @include prefix(transform, translateX(-50%), webkit);
-            @include prefix(transition, all .5s cubic-bezier(0.37, 0.31, 0.2, 0.85), webkit);
+            @include mixins.prefix(transform, translateX(-50%), webkit);
+            @include mixins.prefix(transition, all .5s cubic-bezier(0.37, 0.31, 0.2, 0.85), webkit);
         }
     }
     .move-right-left-self {
@@ -560,8 +562,8 @@
             opacity: 0;
             display: block;
             will-change: transform;
-            @include prefix(transform, translateX(50%), webkit);
-            @include prefix(transition, all .5s cubic-bezier(0.37, 0.31, 0.2, 0.85), webkit);
+            @include mixins.prefix(transform, translateX(50%), webkit);
+            @include mixins.prefix(transition, all .5s cubic-bezier(0.37, 0.31, 0.2, 0.85), webkit);
         }
     }
     .portfolio-hover {
@@ -578,43 +580,43 @@
     }
     &:hover {
         .move-top-bottom {
-            @include prefix(transform, translateY(0), webkit);
+            @include mixins.prefix(transform, translateY(0), webkit);
             opacity: 1;
         }
         .move-bottom-top {
-            @include prefix(transform, translateY(0), webkit);
+            @include mixins.prefix(transform, translateY(0), webkit);
             opacity: 1;
         }
         .move-left-right {
-            @include prefix(transform, translateX(0), webkit);
+            @include mixins.prefix(transform, translateX(0), webkit);
             opacity: 1;
         }
         .move-right-left {
-            @include prefix(transform, translateX(0), webkit);
+            @include mixins.prefix(transform, translateX(0), webkit);
             opacity: 1;
         }
         .move-bottom-top-self {
             span {
-                @include prefix(transform, translateY(0), webkit);
+                @include mixins.prefix(transform, translateY(0), webkit);
                 opacity: 1;
             }
         }
         .move-top-bottom-self {
             span {
                 opacity: 1;
-                @include prefix(transform, translateY(0), webkit);
+                @include mixins.prefix(transform, translateY(0), webkit);
             }
         }
         .move-left-right-self {
             span {
-                @include prefix(transform, translateX(0), webkit);
+                @include mixins.prefix(transform, translateX(0), webkit);
                 opacity: 1;
             }
         }
         .move-right-left-self {
             span {
                 opacity: 1;
-                @include prefix(transform, translateX(0), webkit);
+                @include mixins.prefix(transform, translateX(0), webkit);
             }
         }
         .portfolio-hover {
@@ -637,12 +639,12 @@
         z-index: -1;
         visibility: hidden; 
         background-size: cover;
-        @include prefix(transition, 0.5s, webkit);
+        @include mixins.prefix(transition, 0.5s, webkit);
     } 
     .btn-slide-icon-left, .btn-slide-icon-right {
         .separator {
             position: relative;
-            @include prefix(transition, 0.5s, webkit);
+            @include mixins.prefix(transition, 0.5s, webkit);
             &:after, &:before {
                 content: "";
                 display: block;
@@ -652,13 +654,13 @@
                 height: 2px;
                 width: 11px;
                 background-color:var(--dark-gray);
-                @include prefix(transition, 0.5s, webkit);
+                @include mixins.prefix(transition, 0.5s, webkit);
             }
             &:after { 
-                @include prefix(transform, rotate(132deg), webkit);
+                @include mixins.prefix(transform, rotate(132deg), webkit);
             }
             &:before {  
-                @include prefix(transform, rotate(228deg), webkit);
+                @include mixins.prefix(transform, rotate(228deg), webkit);
                 top: 4px !important;
             }
         } 
@@ -671,17 +673,17 @@
             }
             &:before {
                 transform: rotate(132deg);
-                @include prefix(transform, rotate(132deg), webkit);
+                @include mixins.prefix(transform, rotate(132deg), webkit);
             }
             &:after {
                 transform: rotate(48deg);
-                @include prefix(transform, rotate(48deg), webkit);
+                @include mixins.prefix(transform, rotate(48deg), webkit);
             }
         }
     }
 
     h6, span {
-        @include prefix(transition, 0.2s, webkit);   
+        @include mixins.prefix(transition, 0.2s, webkit);   
     }
     &:hover {
         .bg-fancy-image {
@@ -800,7 +802,7 @@
             svg {
                 opacity: 0;
                 visibility: hidden; 
-                @include prefix(transition, 0.3s, webkit);
+                @include mixins.prefix(transition, 0.3s, webkit);
                 width: 100%;
                 height: 100%;
             }
@@ -812,7 +814,7 @@
                 .sticky-image-title {
                     a {
                         padding-left: 70px;
-                        @include prefix(transition, 0.5s, webkit);
+                        @include mixins.prefix(transition, 0.5s, webkit);
                     }
                     .title {
                         opacity: 0.25;
@@ -840,7 +842,7 @@
 .sticky-image-title {
     position: relative;
     display: flex;
-    @include prefix(transition, 0.3s, webkit);
+    @include mixins.prefix(transition, 0.3s, webkit);
     padding: 0;
     width: 100%;
     a {
@@ -852,11 +854,11 @@
         left: 100px;
         width: 100%;
         top: 45%; 
-        @include prefix(transform, translateY(-50%), webkit);
+        @include mixins.prefix(transform, translateY(-50%), webkit);
         word-break: normal;
         z-index: -1;
         opacity: 0;
-        @include prefix(transition, 0.3s, webkit);
+        @include mixins.prefix(transition, 0.3s, webkit);
     }
 } 
 .sticky-category {
@@ -869,9 +871,9 @@
     justify-content: center;
     top: 0;
     opacity: 0;
-    @include prefix(transition, 0.3s, webkit);
+    @include mixins.prefix(transition, 0.3s, webkit);
     .category { 
-        @include prefix(transform, rotate(180deg), webkit);
+        @include mixins.prefix(transform, rotate(180deg), webkit);
         writing-mode: vertical-lr;
     }
 } 
@@ -934,20 +936,20 @@
                 top: 0;
                 left: 0;
                 .char { 
-                    @include prefix(transform, translateY(-100px), webkit);
+                    @include mixins.prefix(transform, translateY(-100px), webkit);
                     opacity: 0;
                 }
             }
             &:hover {
                 .clone {
                     .char { 
-                        @include prefix(transform, translateY(0), webkit);
+                        @include mixins.prefix(transform, translateY(0), webkit);
                         opacity: 1;
                     }
                 }
                 .words:not(.clone) {
                     .char { 
-                        @include prefix(transform, translateY(100px), webkit);
+                        @include mixins.prefix(transform, translateY(100px), webkit);
                         opacity: 0;
                     }
                 }

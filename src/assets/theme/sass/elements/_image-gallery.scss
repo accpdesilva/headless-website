@@ -1,3 +1,5 @@
+@use "../mixins/mixins";
+
 /* Image gallery style 01 */ 
 .image-gallery-style-01 {
     .gallery-box {
@@ -9,7 +11,7 @@
                 opacity: 0.5;
                 -webkit-filter: blur(2px);
                 filter: blur(2px);
-                @include prefix(transform, scale(1.1), webkit);
+                @include mixins.prefix(transform, scale(1.1), webkit);
             }
         }
     }
@@ -36,7 +38,7 @@
             visibility: hidden;
         }
         img {
-            @include prefix(transform, scale(1.13) translateZ(0), webkit);
+            @include mixins.prefix(transform, scale(1.13) translateZ(0), webkit);
         }
         &:hover {
             i {
@@ -45,7 +47,7 @@
             }
             img {
                 opacity: 0.2;
-                @include prefix(transform, scale(1) translateZ(0), webkit);
+                @include mixins.prefix(transform, scale(1) translateZ(0), webkit);
             }
         }
     }
@@ -92,19 +94,19 @@
             opacity: 0;
             visibility: hidden;
             .gallery-title {
-                @include prefix(transform, scale(1.5), webkit);
+                @include mixins.prefix(transform, scale(1.5), webkit);
             }
         }
         &:hover {
             img{
                 opacity: .2;
-                @include prefix(transform, scale(1.15), webkit);
+                @include mixins.prefix(transform, scale(1.15), webkit);
             }
             .gallery-hover {
                 opacity: 1;
                 visibility: visible;
                 .gallery-title {
-                    @include prefix(transform, scale(1), webkit);
+                    @include mixins.prefix(transform, scale(1), webkit);
                 }
             }
         }

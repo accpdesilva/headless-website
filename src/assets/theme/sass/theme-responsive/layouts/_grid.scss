@@ -1,4 +1,6 @@
-@include respond-to('desktop') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('desktop') {
     .grid {
         &.xxl-grid-6col {
             li { 
@@ -50,7 +52,7 @@
         }
     }
 }
-@include respond-to('mini-desktop') {
+@include mixins.respond-to('mini-desktop') {
     .grid {
         &.xl-grid-6col {
             li { 
@@ -102,7 +104,7 @@
         }
     }
 }
-@include respond-to('laptop') {
+@include mixins.respond-to('laptop') {
     .grid {
         &.lg-grid-6col {
             li { 
@@ -154,7 +156,7 @@
         }
     }
 }
-@include respond-to('tablet') {
+@include mixins.respond-to('tablet') {
     .grid {
         &.md-grid-6col {
             li { 
@@ -206,7 +208,7 @@
         }
     }
 }
-@include respond-to('phone-landscape') {
+@include mixins.respond-to('phone-landscape') {
     .grid {
         &.sm-grid-6col {
             li { 
@@ -297,7 +299,7 @@
         }
     }
 }
-@include respond-to('phone-portrait') {
+@include mixins.respond-to('phone-portrait') {
     .grid {
         &.xs-grid-6col {
             li { 

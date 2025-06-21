@@ -1,12 +1,14 @@
+@use "../mixins/mixins";
+
 /* Counter style 03 */ 
 .counter-style-03 {
     .feature-box {
         i{
-            @include prefix(transition, 0.4s, webkit);
+            @include mixins.prefix(transition, 0.4s, webkit);
         }
         &:hover {
             i{
-                @include prefix(transform, translateY(-7px), webkit);
+                @include mixins.prefix(transform, translateY(-7px), webkit);
             }
         } 
     }
@@ -32,7 +34,7 @@
             top: 50%;
             left: 50%;
             width: 100%;
-            @include prefix(transform, translate(-50%, -50%), webkit);
+            @include mixins.prefix(transform, translate(-50%, -50%), webkit);
         }
         &:after {
             content: '';
@@ -42,7 +44,7 @@
             top:50%;
             width: 1px;
             position: absolute;
-            @include prefix(transform, translateY(-50%), webkit);
+            @include mixins.prefix(transform, translateY(-50%), webkit);
             background-color: var(--extra-medium-gray);
         } 
     }
@@ -75,6 +77,6 @@
         padding: 0;
         list-style: none;
         will-change: transform;
-        @include prefix(transform, translateY(0), webkit);
+        @include mixins.prefix(transform, translateY(0), webkit);
     }
 }

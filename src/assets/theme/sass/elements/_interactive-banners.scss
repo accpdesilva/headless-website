@@ -1,7 +1,9 @@
+@use "../mixins/mixins";
+
 /* Interactive banner style 01 */ 
 .interactive-banner-style-01 {
     figure {
-        @include prefix(transition, all 700ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
+        @include mixins.prefix(transition, all 700ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
         .icon-box {
             opacity: 0;
             position: relative;
@@ -13,10 +15,10 @@
             bottom: 0;
         }
         &:hover {
-            @include prefix(transform, translateY(-5px), webkit);
+            @include mixins.prefix(transform, translateY(-5px), webkit);
             img {
-                @include prefix(transform, scale(1.1), webkit); 
-                @include prefix(transition, all 700ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
+                @include mixins.prefix(transform, scale(1.1), webkit); 
+                @include mixins.prefix(transition, all 700ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
 
             }
             .icon-box {
@@ -47,7 +49,7 @@
     &:hover {
         figure {
             img{
-                @include prefix(transform, scale(1.1), webkit); 
+                @include mixins.prefix(transform, scale(1.1), webkit); 
             }
             figcaption {
                 .features-icon {                    
@@ -65,7 +67,7 @@
     figure {
         position: relative;
         img {
-            @include prefix(transition, all 700ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
+            @include mixins.prefix(transition, all 700ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
         }
         figcaption {
             position: absolute;
@@ -75,7 +77,7 @@
         }
         &:hover {
             img { 
-                @include prefix(transform, scale(1.08), webkit); 
+                @include mixins.prefix(transform, scale(1.08), webkit); 
             }
         }
     }
@@ -84,9 +86,9 @@
 /* Interactive banner style 04 */ 
 .interactive-banner-style-04 {
     figure {
-        @include prefix(transition, all 700ms cubic-bezier(0.5, 1, 0.89, 1), webkit);
+        @include mixins.prefix(transition, all 700ms cubic-bezier(0.5, 1, 0.89, 1), webkit);
         * {
-            @include prefix(transition, all 700ms cubic-bezier(0.5, 1, 0.89, 1), webkit);
+            @include mixins.prefix(transition, all 700ms cubic-bezier(0.5, 1, 0.89, 1), webkit);
         }
         figcaption {
             position: absolute;
@@ -99,11 +101,11 @@
                 height: calc(100% - 50px);
                 opacity: 0;
                 visibility: hidden;
-                @include prefix(transform, translateY(20px), webkit);
-                @include prefix(transition, all 500ms cubic-bezier(0.5, 1, 0.89, 1), webkit);
+                @include mixins.prefix(transform, translateY(20px), webkit);
+                @include mixins.prefix(transition, all 500ms cubic-bezier(0.5, 1, 0.89, 1), webkit);
                 .box-overlay {
                     height: 0%;
-                    @include prefix(transition, all 400ms cubic-bezier(0.5, 1, 0.89, 1), webkit);
+                    @include mixins.prefix(transition, all 400ms cubic-bezier(0.5, 1, 0.89, 1), webkit);
                 }
             }
             .box-button {
@@ -111,16 +113,16 @@
                 visibility: visible;
                 position: relative;  
                 bottom: 0;
-                @include prefix(transition, all 500ms cubic-bezier(0.5, 1, 0.89, 1), webkit);
+                @include mixins.prefix(transition, all 500ms cubic-bezier(0.5, 1, 0.89, 1), webkit);
             }
         }
         &:hover {
-            @include prefix(transform, translateY(-5px), webkit);
+            @include mixins.prefix(transform, translateY(-5px), webkit);
             figcaption {
                 .features-content {
                     opacity: 1;
                     visibility: visible;
-                    @include prefix(transform, translateY(0), webkit);
+                    @include mixins.prefix(transform, translateY(0), webkit);
                 }
                 .box-overlay {
                     height: 100%;
@@ -140,7 +142,7 @@
 .interactive-banner-style-05 {
     figure {
         img {
-            @include prefix(transition, all 700ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
+            @include mixins.prefix(transition, all 700ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
         }
         figcaption {
             .btn {
@@ -148,28 +150,28 @@
                 visibility: hidden;
                 opacity: 0;
                 transition-timing-function: linear;
-                @include prefix(transition, all 700ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
+                @include mixins.prefix(transition, all 700ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
             }
             .content-arrow {
                 position: absolute;
                 right: 0;
                 opacity: 0;
                 top: 50%;
-                @include prefix(transform, translateY(5px), webkit); 
+                @include mixins.prefix(transform, translateY(5px), webkit); 
             }
 
         }
         &:hover {
             img { 
-                @include prefix(transform, scale(1.08), webkit); 
+                @include mixins.prefix(transform, scale(1.08), webkit); 
             } 
             figcaption {
                 img {
-                    @include prefix(transform, scale(1), webkit); 
+                    @include mixins.prefix(transform, scale(1), webkit); 
                 }
                 .content-arrow {
                     opacity: 1;
-                    @include prefix(transform, translateY(-50%), webkit);
+                    @include mixins.prefix(transform, translateY(-50%), webkit);
                 } 
             } 
             figcaption {
@@ -188,7 +190,7 @@
                 visibility: visible;
             }
             img { 
-                @include prefix(transform, scale(1.08), webkit); 
+                @include mixins.prefix(transform, scale(1.08), webkit); 
             } 
         }
     }
@@ -200,10 +202,10 @@
     overflow: hidden;
     .banners-icon {
         z-index:9; 
-        @include prefix(transition, 350ms cubic-bezier(0.12, 0, 0.39, 0), webkit);
+        @include mixins.prefix(transition, 350ms cubic-bezier(0.12, 0, 0.39, 0), webkit);
     }
     img {
-        @include prefix(transition, 1s cubic-bezier(0.12, 0, 0.39, 0), webkit);
+        @include mixins.prefix(transition, 1s cubic-bezier(0.12, 0, 0.39, 0), webkit);
         width: 100%;
     }
     .interactive-banners-content {
@@ -213,11 +215,11 @@
         width: 100%;
         z-index: 1;
         transform: translateY(calc(100% - 155px)); 
-        @include prefix(transition, 550ms cubic-bezier(0.12, 0, 0.1, 0), webkit); 
+        @include mixins.prefix(transition, 550ms cubic-bezier(0.12, 0, 0.1, 0), webkit); 
         .interactive-banners-content-text {
             opacity: 0;
             visibility: hidden;
-            @include prefix(transition, 350ms cubic-bezier(0.12, 0, 0.39, 0), webkit);
+            @include mixins.prefix(transition, 350ms cubic-bezier(0.12, 0, 0.39, 0), webkit);
         }
     }
     .box-overlay {
@@ -226,12 +228,12 @@
         top: auto; 
         visibility: visible;
         opacity:0;
-        @include prefix(transition, 350ms cubic-bezier(0.12, 0, 0.39, 0), webkit);
+        @include mixins.prefix(transition, 350ms cubic-bezier(0.12, 0, 0.39, 0), webkit);
     }
     &:hover { 
         img {
-            @include prefix(transform, scale(1.3), webkit); 
-            @include prefix(transition, 3s cubic-bezier(0.12, 0, 0.39, 0), webkit);
+            @include mixins.prefix(transform, scale(1.3), webkit); 
+            @include mixins.prefix(transition, 3s cubic-bezier(0.12, 0, 0.39, 0), webkit);
         }
         .icon-hover-base-color { 
             color:var(--base-color) !important;
@@ -257,11 +259,11 @@
         position:relative;
         overflow:hidden;
         > img {
-            @include prefix(transition, 0.6s cubic-bezier(0.12, 0, 0.39, 0), webkit);
-            @include prefix(transform, scale(1), webkit);
+            @include mixins.prefix(transition, 0.6s cubic-bezier(0.12, 0, 0.39, 0), webkit);
+            @include mixins.prefix(transform, scale(1), webkit);
         }
         .overlay-bg { 
-            @include prefix(transition, 0.4s cubic-bezier(0.12, 0, 0.39, 0), webkit);
+            @include mixins.prefix(transition, 0.4s cubic-bezier(0.12, 0, 0.39, 0), webkit);
         }
         figcaption {
             position: absolute;
@@ -276,19 +278,19 @@
             bottom: 50px;
             left: 0;
             width: 100%;
-            @include prefix(transition, 1s, webkit);
+            @include mixins.prefix(transition, 1s, webkit);
         }
         .hover-show-content {
             opacity: 0;
             visibility: hidden;
             position: absolute;
             bottom: 50px;
-            @include prefix(transition, 0.4s cubic-bezier(0.12, 0, 0.39, 0), webkit);
-            @include prefix(transform, scale(1), webkit);
+            @include mixins.prefix(transition, 0.4s cubic-bezier(0.12, 0, 0.39, 0), webkit);
+            @include mixins.prefix(transform, scale(1), webkit);
         }
         &:hover {
             > img { 
-                @include prefix(transform, scale(1.1), webkit);
+                @include mixins.prefix(transform, scale(1.1), webkit);
             }
             .overlay-bg {
                 opacity:0.7;
@@ -296,12 +298,12 @@
             .hover-hide-content {
                 opacity: 0;
                 visibility: hidden;
-                @include prefix(transition, 0.1s, webkit);
+                @include mixins.prefix(transition, 0.1s, webkit);
             }
             .hover-show-content {
                 opacity: 1;
                 visibility: visible;
-                @include prefix(transform, scale(1.2), webkit);
+                @include mixins.prefix(transform, scale(1.2), webkit);
             }
         }
     }
@@ -312,8 +314,8 @@
     figure { 
         &:hover {
             img { 
-                @include prefix(transform, scale(1.08), webkit); 
-                @include prefix(transition, 1.5s, webkit);
+                @include mixins.prefix(transform, scale(1.08), webkit); 
+                @include mixins.prefix(transition, 1.5s, webkit);
             }
             .box-overlay {
                 opacity: 1;
@@ -322,8 +324,8 @@
             figcaption {
                 .circle-box {
                     background-color: var(--white) !important;
-                    @include prefix(transform, scale(1.1), webkit);
-                    @include prefix(transition, all 500ms cubic-bezier(0.61, 1, 0.88, 1.5), webkit);
+                    @include mixins.prefix(transform, scale(1.1), webkit);
+                    @include mixins.prefix(transition, all 500ms cubic-bezier(0.61, 1, 0.88, 1.5), webkit);
                 } 
             }
         }
@@ -333,7 +335,7 @@
 /* Interactive banner style 09 */ 
 .interactive-banner-style-09 {
     img {
-        @include prefix(transition, all 1.5s cubic-bezier(.19,1,.22,1), webkit);
+        @include mixins.prefix(transition, all 1.5s cubic-bezier(.19,1,.22,1), webkit);
     }
     .image-content {
         position: absolute;
@@ -346,8 +348,8 @@
             opacity: 0.6;
             visibility: visible;
             will-change: transform;
-            @include prefix(transform, translateY(0), webkit);
-            @include prefix(transition, 0.4s cubic-bezier(0.12, 0, 0.39, 0), webkit);
+            @include mixins.prefix(transform, translateY(0), webkit);
+            @include mixins.prefix(transition, 0.4s cubic-bezier(0.12, 0, 0.39, 0), webkit);
         }
         .content-title-hover {
             position: absolute;
@@ -356,8 +358,8 @@
             bottom: 0;
             visibility: hidden;
             will-change: transform;
-            @include prefix(transform, translateY(20px), webkit);
-            @include prefix(transition, 0.4s cubic-bezier(0.12, 0, 0.39, 0), webkit);
+            @include mixins.prefix(transform, translateY(20px), webkit);
+            @include mixins.prefix(transition, 0.4s cubic-bezier(0.12, 0, 0.39, 0), webkit);
         }
         .content-arrow { 
             will-change: transform;
@@ -365,14 +367,14 @@
             right: 0;
             opacity: 0;
             top: 50%;
-            @include prefix(transform, translateY(10px), webkit);
-            @include prefix(transition, all 0.3s cubic-bezier(0.12, 0, 0.39, 0), webkit);
+            @include mixins.prefix(transform, translateY(10px), webkit);
+            @include mixins.prefix(transition, all 0.3s cubic-bezier(0.12, 0, 0.39, 0), webkit);
             display: flex;
             align-items: center;
             justify-content: center;
         }
         .label {
-            @include prefix(transition, 0.3s cubic-bezier(0.12, 0, 0.39, 0), webkit);
+            @include mixins.prefix(transition, 0.3s cubic-bezier(0.12, 0, 0.39, 0), webkit);
         }
         .hover-label-icon {
             i {
@@ -380,22 +382,22 @@
                 position: absolute;
                 top: 20px;
                 left: 0;
-                @include prefix(transition, 0.3s cubic-bezier(0.12, 0, 0.39, 0), webkit);
+                @include mixins.prefix(transition, 0.3s cubic-bezier(0.12, 0, 0.39, 0), webkit);
             }
         }
         &:hover {
             .content-arrow {
                 opacity: 1;
-                @include prefix(transform, translateY(-42%), webkit);
+                @include mixins.prefix(transform, translateY(-42%), webkit);
             }
             .content-title {
                 opacity: 0;
                 visibility: hidden;
-                @include prefix(transform, translateY(-20px), webkit);
+                @include mixins.prefix(transform, translateY(-20px), webkit);
             }
             .content-title-hover {
                 visibility: visible;
-                @include prefix(transform, translateY(-3px), webkit);
+                @include mixins.prefix(transform, translateY(-3px), webkit);
             }
             .box-overlay {
                 opacity: 1;
@@ -415,7 +417,7 @@
     }
     &:hover{
         img{
-            @include prefix(transform, scale(1.1), webkit);
+            @include mixins.prefix(transform, scale(1.1), webkit);
         }
     }
 }

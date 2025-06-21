@@ -1,4 +1,6 @@
-@include respond-to('desktop') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('desktop') {
     /* Font size */
     .xxl-fs-100 {
         font-size: 6.25rem;
@@ -57,7 +59,7 @@
         line-height: 18.75rem;
     }
 }
-@include respond-to('mini-desktop') {
+@include mixins.respond-to('mini-desktop') {
     /* Font size */
     .xl-fs-0 {
         font-size: 0;
@@ -308,7 +310,7 @@
         line-height: initial;
     }
 }
-@include respond-to('laptop') {
+@include mixins.respond-to('laptop') {
     /* Font size */
     .lg-fs-0 {
         font-size: 0;
@@ -559,7 +561,7 @@
         line-height: initial;
     }
 }
-@include respond-to('tablet') {
+@include mixins.respond-to('tablet') {
     /* Font size */ 
     .md-fs-0 {
         font-size: 0;
@@ -810,7 +812,7 @@
         line-height: initial;
     }
 }
-@include respond-to('phone-landscape') {
+@include mixins.respond-to('phone-landscape') {
     /* Heading */
     h1, h2, h3, h4, h5, h6 {
         margin-bottom: 25px;
@@ -1065,7 +1067,7 @@
         line-height: initial;
     }
 }
-@include respond-to('phone-portrait') { 
+@include mixins.respond-to('phone-portrait') { 
     /* Font size */ 
     .xs-fs-0 {
         font-size: 0;

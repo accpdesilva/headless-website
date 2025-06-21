@@ -1,3 +1,5 @@
+@use "../mixins/mixins";
+
 /* Event style 02 */ 
 .time-table {
     display: -webkit-box; 
@@ -94,8 +96,8 @@
         -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         transform: translateX(-50%);
-        @include box-shadow(0 0 60px rgba(0,0,0,.14)); 
-        @include prefix(transition, 0.05s, webkit);
+        @include mixins.box-shadow(0 0 60px rgba(0,0,0,.14)); 
+        @include mixins.prefix(transition, 0.05s, webkit);
         &:after {
             content: '';
             top: -21px;
@@ -175,7 +177,7 @@
                 min-width: 354px;
                 i {
                     position: static;
-                    @include prefix(transform, none, webkit);
+                    @include mixins.prefix(transform, none, webkit);
                 }
             }
         }

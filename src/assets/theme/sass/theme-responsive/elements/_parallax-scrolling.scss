@@ -1,4 +1,6 @@
-@include respond-to('laptop') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('laptop') {
     [data-parallax-background-ratio], 
     .fix-background {
         background-attachment: inherit !important;

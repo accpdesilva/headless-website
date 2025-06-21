@@ -1,3 +1,5 @@
+@use "../mixins/mixins";
+
 /* Progress bar */
 .progress {
     position: relative;
@@ -8,7 +10,7 @@
         top: 0;
         left: 0;
         overflow: visible;
-        @include prefix(transition, all 1s cubic-bezier(0.50, 1, 0.5, 1), webkit);
+        @include mixins.prefix(transition, all 1s cubic-bezier(0.50, 1, 0.5, 1), webkit);
         &.appear {
             .progress-bar-percent {
                 opacity: 1;

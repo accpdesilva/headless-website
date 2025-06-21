@@ -1,4 +1,6 @@
-@include respond-to('laptop') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('laptop') {
     .clients-style-02 {
         .swiper-button-prev {
             left: -30px;
@@ -8,7 +10,7 @@
         }
     }
 }
-@include respond-to('tablet') {
+@include mixins.respond-to('tablet') {
     .clients-style-02 {
         .swiper-button-prev {
             left: -15px;
@@ -18,7 +20,7 @@
         }
     }
 }
-@include respond-to('phone-landscape') {
+@include mixins.respond-to('phone-landscape') {
     .clients-style-02 {
         .swiper-button-prev {
             left: 0px;

@@ -1,3 +1,5 @@
+@use "../mixins/mixins";
+
 /* Pricing table style 01 */
 .pricing-table-style-01 {
     &.popular-item {
@@ -18,7 +20,7 @@
         top: 0;
         left: 50%;
         padding: 1px 20px;
-        @include prefix(transform, translate(-50%, -50%), webkit);
+        @include mixins.prefix(transform, translate(-50%, -50%), webkit);
     }
 }
 
@@ -35,8 +37,8 @@
             top: 50%;
             right: 0;
             text-align: center; 
-            @include prefix(border-radius, 100%, webkit);
-            @include prefix(transform, translateY(-50%), webkit);
+            @include mixins.prefix(border-radius, 100%, webkit);
+            @include mixins.prefix(transform, translateY(-50%), webkit);
             i {
                 left: 0;
                 font-size: 13px;
@@ -76,7 +78,7 @@
                     }
                 }
                 .text-dark-gray {
-                    @include prefix(transition, 0.3s, webkit);  
+                    @include mixins.prefix(transition, 0.3s, webkit);  
                 }
                 &:hover, &.active {
                     box-shadow: none;
@@ -139,9 +141,9 @@
                         opacity: 0;
                         border-radius: 50em;
                         background-color: #fff;
-                        @include prefix(transform, scale(.5), webkit);
+                        @include mixins.prefix(transform, scale(.5), webkit);
                         transition: transform .65s cubic-bezier(.23,1,.32,1),opacity .65s cubic-bezier(.23,1,.32,1);
-                        @include box-shadow(0 0 20px rgba(0,0,0,.5)); 
+                        @include mixins.box-shadow(0 0 20px rgba(0,0,0,.5)); 
                     }
                     &:after {
                         content: '';
@@ -155,7 +157,7 @@
                         background-color: transparent;
                         &:before {
                             opacity: 1;
-                            @include prefix(transform, scale(1), webkit);
+                            @include mixins.prefix(transform, scale(1), webkit);
                         }
                     }
                 }
@@ -192,19 +194,19 @@
 /* Pricing table style 09 */
 .pricing-table-style-09 {
     .row{
-        @include prefix(transition, all 400ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
+        @include mixins.prefix(transition, all 400ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
         img, i {
-            @include prefix(transition, all 400ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
+            @include mixins.prefix(transition, all 400ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
         }
         &:hover{
-            @include box-shadow(0 20px 50px rgba(0,0,0,.08)); 
+            @include mixins.box-shadow(0 20px 50px rgba(0,0,0,.08)); 
             img, i {
-                @include prefix(transform, scale(1.1), webkit);
+                @include mixins.prefix(transform, scale(1.1), webkit);
             }
         }
     }
     .action {
-        @include prefix(transition, 0.3s, webkit);
+        @include mixins.prefix(transition, 0.3s, webkit);
         &:hover {
             margin-right: -5px;
         }
@@ -215,7 +217,7 @@
 .pricing-table-style-10 {
     .cover-background {
         filter: grayscale(0);
-        @include prefix(transition, all 700ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
+        @include mixins.prefix(transition, all 700ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
     }
     .popular-label {
         position: absolute;
@@ -227,7 +229,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        @include prefix(transform, translate(0, -50%), webkit);
+        @include mixins.prefix(transform, translate(0, -50%), webkit);
     }   
     &:hover{
         .cover-background {
@@ -242,7 +244,7 @@
         list-style: none;
         padding: 25px 0;
         position: relative;
-        @include prefix(transition, all 200ms cubic-bezier(0.37, 0.80, 0.63, 1), webkit);
+        @include mixins.prefix(transition, all 200ms cubic-bezier(0.37, 0.80, 0.63, 1), webkit);
         .popular-label {
             position: absolute;
             border-radius: 100%;
@@ -251,7 +253,7 @@
             justify-content: center;
         }
         &:hover {
-            @include prefix(transform, scale(1.03), webkit);
+            @include mixins.prefix(transform, scale(1.03), webkit);
         }
     } 
 }
@@ -269,12 +271,12 @@
         -ms-flex-align: center;
         align-items: center;
         padding: 15px 0;  
-        @include prefix(transition, all 500ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
+        @include mixins.prefix(transition, all 500ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
         &:last-child { 
             padding-bottom:0;
         }
         &:hover{
-            @include prefix(transform, translateX(15px), webkit);
+            @include mixins.prefix(transform, translateX(15px), webkit);
         }
     }
 }
@@ -292,12 +294,12 @@
         -ms-flex-align: center;
         align-items: center;
         padding: 25px 0;  
-        @include prefix(transition, all 500ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
+        @include mixins.prefix(transition, all 500ms cubic-bezier(0.61, 1, 0.88, 1), webkit);
         &:last-child { 
             padding-bottom:0;
         }
         &:hover{
-            @include prefix(transform, translateX(15px), webkit);
+            @include mixins.prefix(transform, translateX(15px), webkit);
         }
     }
 }

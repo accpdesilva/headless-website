@@ -1,3 +1,5 @@
+@use "../mixins/mixins";
+
 /* HTML video */ 
 .html-video { 
     background-color: #000;
@@ -6,7 +8,7 @@
     top: 50%;
     z-index: -3;
     object-fit: cover;
-    @include prefix(transform, translateY(-50%), webkit);
+    @include mixins.prefix(transform, translateY(-50%), webkit);
     
 }
 

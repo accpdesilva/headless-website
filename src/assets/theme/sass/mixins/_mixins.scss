@@ -1,3 +1,6 @@
+@use "../variables";
+
+@use "sass:map";
 // Box shadow
 @mixin box-shadow($value) {
     -webkit-box-shadow: $value;
@@ -35,8 +38,8 @@ $prefix: (
 
 // Mixin for media query
 @mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media ($media-max: map-get($breakpoints, $breakpoint)) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (variables.$media-max: map.get($breakpoints, $breakpoint)) {
       @content;
     }
   }

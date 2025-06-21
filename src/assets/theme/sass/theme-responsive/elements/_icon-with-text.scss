@@ -1,10 +1,12 @@
-@include respond-to('laptop') {
+@use "../../mixins/mixins";
+
+@include mixins.respond-to('laptop') {
     .feature-box {
         &:hover {
             .content-slide-up {
                 &.content-scale {
                     .feature-box-overlay {
-                        @include prefix(transform, scale(1), webkit);
+                        @include mixins.prefix(transform, scale(1), webkit);
                     }
                 }
             }
@@ -19,7 +21,7 @@
         }
     }
 }
-@include respond-to('phone-landscape') {
+@include mixins.respond-to('phone-landscape') {
     .feature-box {
         &.feature-box-left-icon, &.feature-box-left-icon-middle {
             .feature-box-icon {
@@ -30,7 +32,7 @@
             .content-slide-up {
                 &.content-scale {
                     .feature-box-overlay {
-                        @include prefix(transform, scale(1), webkit);
+                        @include mixins.prefix(transform, scale(1), webkit);
                     }
                 }
             }

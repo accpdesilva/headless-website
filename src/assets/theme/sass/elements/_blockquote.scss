@@ -1,3 +1,5 @@
+@use "../mixins/mixins";
+
 /* Blockquote */
 blockquote {
     footer {
@@ -15,7 +17,7 @@ blockquote {
     .blockquote-content {
         padding: 5% 0 5% 26%;
         margin-left: -8vw;
-        @include prefix(border-radius, 50px 50px 125px 50px, webkit);
+        @include mixins.prefix(border-radius, 50px 50px 125px 50px, webkit);
     }
 }
 /* Use for mac desktop pc */

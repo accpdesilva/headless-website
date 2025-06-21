@@ -1,9 +1,11 @@
+@use "../mixins/mixins";
+
 /* Rotate box */
 .rotate-box {
     will-change: transform;
     min-height: 250px; 
-    @include prefix(perspective, 1000, webkit);
-    @include prefix(transform-style, preserve-3d, webkit);
+    @include mixins.prefix(perspective, 1000, webkit);
+    @include mixins.prefix(transform-style, preserve-3d, webkit);
     p {
         color: rgba(255,255,255,.7);
     }
@@ -12,127 +14,127 @@
         top: 0;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-        @include prefix(transition, transform 0.60s cubic-bezier(.5,.3,.3,1), webkit);
+        @include mixins.prefix(transition, transform 0.60s cubic-bezier(.5,.3,.3,1), webkit);
     }
     .rotate-content-front, .rotate-content-back {
         position: relative;
         top: 50%; 
-        @include prefix(transform-style, preserve-3d, webkit);
-        @include prefix(transition, transform 0.60s cubic-bezier(.5,.3,.3,1), webkit);
+        @include mixins.prefix(transform-style, preserve-3d, webkit);
+        @include mixins.prefix(transition, transform 0.60s cubic-bezier(.5,.3,.3,1), webkit);
     }
     &.to-left, &.to-right {
         .front-side {
             z-index: 1;
-            @include prefix(transform, rotateY(0deg), webkit); 
-            @include prefix(transform-style, preserve-3d, webkit);
+            @include mixins.prefix(transform, rotateY(0deg), webkit); 
+            @include mixins.prefix(transform-style, preserve-3d, webkit);
         }
         .rotate-content-front {
-            @include prefix(transform, translateY(-50%) translateX(0px) scale(1), webkit);
+            @include mixins.prefix(transform, translateY(-50%) translateX(0px) scale(1), webkit);
         }
         &:hover {
             .back-side {
-                @include prefix(transform, rotateY(0deg), webkit);
-                @include prefix(transform-style, preserve-3d, webkit);
+                @include mixins.prefix(transform, rotateY(0deg), webkit);
+                @include mixins.prefix(transform-style, preserve-3d, webkit);
             }            
             .rotate-content-back {
-                @include prefix(transform, translateY(-50%) translateX(0px) translateZ(0px) scale(1), webkit);
-                @include prefix(transform-style, preserve-3d, webkit);
+                @include mixins.prefix(transform, translateY(-50%) translateX(0px) translateZ(0px) scale(1), webkit);
+                @include mixins.prefix(transform-style, preserve-3d, webkit);
             }
         }
     }
     &.to-left {
         .back-side {
-            @include prefix(transform, rotateY(180deg), webkit);
-            @include prefix(transform-style, preserve-3d, webkit);
+            @include mixins.prefix(transform, rotateY(180deg), webkit);
+            @include mixins.prefix(transform-style, preserve-3d, webkit);
             z-index: 1;
         }
         .rotate-content-back {
-            @include prefix(transform, translateY(-50%) translateX(400px) translateZ(60px) scale(.88), webkit);
+            @include mixins.prefix(transform, translateY(-50%) translateX(400px) translateZ(60px) scale(.88), webkit);
         }
         &:hover {
             .front-side {
-                @include prefix(transform, rotateY(-180deg), webkit);
-                @include prefix(transform-style, preserve-3d, webkit);
+                @include mixins.prefix(transform, rotateY(-180deg), webkit);
+                @include mixins.prefix(transform-style, preserve-3d, webkit);
             }
             .rotate-content-front {
-                @include prefix(transform, translateY(-50%) translateX(-400px) scale(.88), webkit);
-                @include prefix(transform-style, preserve-3d, webkit);
+                @include mixins.prefix(transform, translateY(-50%) translateX(-400px) scale(.88), webkit);
+                @include mixins.prefix(transform-style, preserve-3d, webkit);
             }
         }
     }
     &.to-right {
         .back-side {
-            @include prefix(transform, rotateY(-180deg), webkit);
-            @include prefix(transform-style, preserve-3d, webkit);
+            @include mixins.prefix(transform, rotateY(-180deg), webkit);
+            @include mixins.prefix(transform-style, preserve-3d, webkit);
             z-index: 1;
         }
         .rotate-content-back {
-            @include prefix(transform, translateY(-50%) translateX(-400px) translateZ(60px) scale(.88), webkit);
+            @include mixins.prefix(transform, translateY(-50%) translateX(-400px) translateZ(60px) scale(.88), webkit);
         }
         &:hover {
             .front-side {
-                @include prefix(transform, rotateY(180deg), webkit);
-                @include prefix(transform-style, preserve-3d, webkit);
+                @include mixins.prefix(transform, rotateY(180deg), webkit);
+                @include mixins.prefix(transform-style, preserve-3d, webkit);
             }
             .rotate-content-front {
-                @include prefix(transform, translateY(-50%) translateX(400px) scale(.88), webkit);
-                @include prefix(transform-style, preserve-3d, webkit);
+                @include mixins.prefix(transform, translateY(-50%) translateX(400px) scale(.88), webkit);
+                @include mixins.prefix(transform-style, preserve-3d, webkit);
             }
         }
     }
     &.to-top, &.to-bottom {
         .front-side {
-            @include prefix(transform, rotateX(0deg), webkit);
-            @include prefix(transform-style, preserve-3d, webkit);
+            @include mixins.prefix(transform, rotateX(0deg), webkit);
+            @include mixins.prefix(transform-style, preserve-3d, webkit);
         }
         .rotate-content-front {
-            @include prefix(transform, translateY(-50%) translateX(0px) scale(1), webkit);
+            @include mixins.prefix(transform, translateY(-50%) translateX(0px) scale(1), webkit);
         }
         &:hover {
             .back-side {
-                @include prefix(transform, rotateX(0deg), webkit);
-                @include prefix(transform-style, preserve-3d, webkit);
+                @include mixins.prefix(transform, rotateX(0deg), webkit);
+                @include mixins.prefix(transform-style, preserve-3d, webkit);
                 z-index: 1;
             }
             .rotate-content-front {
-                @include prefix(transform, translateY(-50%) translateY(400px) scale(.88), webkit);
-                @include prefix(transform-style, preserve-3d, webkit);
+                @include mixins.prefix(transform, translateY(-50%) translateY(400px) scale(.88), webkit);
+                @include mixins.prefix(transform-style, preserve-3d, webkit);
             }            
             .rotate-content-back {
-                @include prefix(transform, translateY(-50%) translateY(0px) translateZ(0px) scale(1), webkit);
-                @include prefix(transform-style, preserve-3d, webkit);
+                @include mixins.prefix(transform, translateY(-50%) translateY(0px) translateZ(0px) scale(1), webkit);
+                @include mixins.prefix(transform-style, preserve-3d, webkit);
             }
         }
     }
     &.to-top {
         .back-side {
-            @include prefix(transform, rotateX(180deg), webkit);
-            @include prefix(transform-style, preserve-3d, webkit);
+            @include mixins.prefix(transform, rotateX(180deg), webkit);
+            @include mixins.prefix(transform-style, preserve-3d, webkit);
             z-index: 1;
         }
         .rotate-content-back {
-            @include prefix(transform, translateY(-50%) translateY(-400px) translateZ(60px) scale(.88), webkit);
+            @include mixins.prefix(transform, translateY(-50%) translateY(-400px) translateZ(60px) scale(.88), webkit);
         }
         &:hover {
             .front-side {
-                @include prefix(transform, rotateX(-180deg), webkit);
-                @include prefix(transform-style, preserve-3d, webkit);
+                @include mixins.prefix(transform, rotateX(-180deg), webkit);
+                @include mixins.prefix(transform-style, preserve-3d, webkit);
             }
         }
     }
     &.to-bottom {
         .back-side {
-            @include prefix(transform, rotateX(-180deg), webkit);
-            @include prefix(transform-style, preserve-3d, webkit);
+            @include mixins.prefix(transform, rotateX(-180deg), webkit);
+            @include mixins.prefix(transform-style, preserve-3d, webkit);
             z-index: 1;
         }
         .rotate-content-back {
-            @include prefix(transform, translateY(-50%) translateY(400px) translateZ(60px) scale(.88), webkit);
+            @include mixins.prefix(transform, translateY(-50%) translateY(400px) translateZ(60px) scale(.88), webkit);
         }
         &:hover {
             .front-side {
-                @include prefix(transform, rotateX(180deg), webkit);
-                @include prefix(transform-style, preserve-3d, webkit);
+                @include mixins.prefix(transform, rotateX(180deg), webkit);
+                @include mixins.prefix(transform-style, preserve-3d, webkit);
             }            
         }
     }
@@ -162,57 +164,57 @@
         position: relative;
         &:hover {
             .front { 
-                @include prefix(transform, rotateY(-180deg), webkit); 
+                @include mixins.prefix(transform, rotateY(-180deg), webkit); 
             }
             .back { 
-               @include prefix(transform, rotateY(0deg), webkit);  
+               @include mixins.prefix(transform, rotateY(0deg), webkit);  
             }
         }
         &.to-right {
             .front { 
-                @include prefix(transform, rotateY(0deg), webkit);   
+                @include mixins.prefix(transform, rotateY(0deg), webkit);   
             }
             .back { 
-                @include prefix(transform, rotateY(-180deg), webkit);  
+                @include mixins.prefix(transform, rotateY(-180deg), webkit);  
             }
             &:hover {
                 .front { 
-                    @include prefix(transform, rotateY(180deg), webkit);   
+                    @include mixins.prefix(transform, rotateY(180deg), webkit);   
                 }
                 .back { 
-                    @include prefix(transform, rotateY(0deg), webkit);    
+                    @include mixins.prefix(transform, rotateY(0deg), webkit);    
                 } 
             } 
         }
         &.to-top {
             .front {  
-                @include prefix(transform, rotateX(0deg), webkit); 
+                @include mixins.prefix(transform, rotateX(0deg), webkit); 
             }
             .back { 
-                 @include prefix(transform, rotateX(-180deg), webkit);   
+                 @include mixins.prefix(transform, rotateX(-180deg), webkit);   
             }
             &:hover {
                 .front { 
-                     @include prefix(transform, rotateX(180deg), webkit);  
+                     @include mixins.prefix(transform, rotateX(180deg), webkit);  
                 }
                 .back { 
-                     @include prefix(transform, rotateX(0deg), webkit);  
+                     @include mixins.prefix(transform, rotateX(0deg), webkit);  
                 } 
             } 
         }
         &.to-bottom {
             .front { 
-                 @include prefix(transform, rotateX(0deg), webkit);   
+                 @include mixins.prefix(transform, rotateX(0deg), webkit);   
             }
             .back { 
-                 @include prefix(transform, rotateX(180deg), webkit); 
+                 @include mixins.prefix(transform, rotateX(180deg), webkit); 
             }
             &:hover {
                 .front { 
-                    @include prefix(transform, rotateX(-180deg), webkit);  
+                    @include mixins.prefix(transform, rotateX(-180deg), webkit);  
                 }
                 .back { 
-                     @include prefix(transform, rotateX(0deg), webkit);  
+                     @include mixins.prefix(transform, rotateX(0deg), webkit);  
                 } 
             } 
         }
@@ -234,7 +236,7 @@
         transform: translate3d(0, 0, 0) scale(1);  
     }
     .front {
-        @include prefix(transform, rotateY(0deg), webkit);
+        @include mixins.prefix(transform, rotateY(0deg), webkit);
         background-size: cover; 
         z-index: 1;
         transform-style: preserve-3d;
@@ -245,7 +247,7 @@
         transition: transform 0.8s cubic-bezier(0.5, 0.2, 0.2, 0.8);
     }
     .back { 
-        @include prefix(transform, rotateY(180deg), webkit); 
+        @include mixins.prefix(transform, rotateY(180deg), webkit); 
         position: absolute;
         display: block;
         top: 0;

@@ -1,5 +1,8 @@
+@use "../mixins/mixins";
+@use "../variables";
+
 /* Social media icon */
-@each $social-classname,$color-code in $social-colors {
+@each $social-classname,$color-code in variables.$social-colors {
     .elements-social {
         .#{$social-classname} {
             &:hover {
@@ -26,7 +29,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                @include prefix(transition, 0.3s cubic-bezier(0.12, 0, 0.39, 0), webkit);
+                @include mixins.prefix(transition, 0.3s cubic-bezier(0.12, 0, 0.39, 0), webkit);
             }
         }
     }
@@ -115,7 +118,7 @@
     .icon-with-animation {
         a {
             &:hover {
-                @include prefix(transform, translateY(-8px), webkit);
+                @include mixins.prefix(transform, translateY(-8px), webkit);
             }
         }
     }
@@ -141,13 +144,13 @@
             a { 
                 color: var(--white); 
                 border-radius: 100%;
-                @include prefix(transition, 0.4s cubic-bezier(0.12, 0, 0.39, 0), webkit);
+                @include mixins.prefix(transition, 0.4s cubic-bezier(0.12, 0, 0.39, 0), webkit);
                 &:hover {
                     background-color: var(--white) !important;
                     box-shadow: 0 0 30px rgba(23,23,23,.25);
                     transform: translate3d(0, -3px, 0);
                 }
-                @each $social-classname,$color-code in $social-colors {
+                @each $social-classname,$color-code in variables.$social-colors {
                     &.#{$social-classname} {
                         background-color: $color-code;
                     }
@@ -183,12 +186,12 @@
                     margin: 0;
                     position: absolute;
                     top: 50%;
-                    @include prefix(transition, 0.4s cubic-bezier(0.12, 0, 0.39, 0), webkit); 
+                    @include mixins.prefix(transition, 0.4s cubic-bezier(0.12, 0, 0.39, 0), webkit); 
                     z-index: -1;
                     background-color: var(--dark-gray);
                 }
 
-                @each $social-classname,$color-code in $social-colors {
+                @each $social-classname,$color-code in variables.$social-colors {
                     &.#{$social-classname} {
                         span {
                             background-color: $color-code;
@@ -208,7 +211,7 @@
                 &:hover {
                     color: var(--white) !important; 
                 }
-                @each $social-classname,$color-code in $social-colors {
+                @each $social-classname,$color-code in variables.$social-colors {
                     &.#{$social-classname} {
                         color: $color-code;
                     }
@@ -263,7 +266,7 @@
                         transition-duration: 0.3s;
                     }
                 }
-                @each $social-classname,$color-code in $social-colors {
+                @each $social-classname,$color-code in variables.$social-colors {
                     &.#{$social-classname} {
                         color: $color-code;
                     }
@@ -295,9 +298,9 @@
                     height: 100%;
                     width: 100%;
                     z-index: -1;
-                    @include prefix(transition, 0.3s cubic-bezier(0.12, 0, 0.39, 0), webkit); 
+                    @include mixins.prefix(transition, 0.3s cubic-bezier(0.12, 0, 0.39, 0), webkit); 
                 }
-                @each $social-classname,$color-code in $social-colors {
+                @each $social-classname,$color-code in variables.$social-colors {
                     &.#{$social-classname} {
                         color: $color-code;
                         span {
@@ -346,7 +349,7 @@
                 &:hover { 
                     color: var(--white) !important;
                     span {  
-                        @include prefix(transform, scale(1), webkit); 
+                        @include mixins.prefix(transform, scale(1), webkit); 
                         opacity: 1;
                     }
                 } 
@@ -361,9 +364,9 @@
                     box-sizing: content-box;
                     margin: 0;
                     position: absolute; 
-                    @include prefix(transform, scale(1.2), webkit);
+                    @include mixins.prefix(transform, scale(1.2), webkit);
                     opacity: 0;
-                    @include prefix(transition, 0.5s cubic-bezier(0.12, 0, 0.39, 0), webkit);
+                    @include mixins.prefix(transition, 0.5s cubic-bezier(0.12, 0, 0.39, 0), webkit);
                     pointer-events: none;
                     z-index: -1;
                     background-color: var(--dark-gray);
@@ -402,7 +405,7 @@
     }
     .default-color { 
         a {
-            @each $social-classname,$color-code in $social-colors {
+            @each $social-classname,$color-code in variables.$social-colors {
                 &.#{$social-classname} {
                     color: $color-code;     
                 }
